@@ -15,7 +15,7 @@ import Foundation
 class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate {
     
     @IBOutlet weak var tableView1: UITableView!
-    @IBOutlet weak var tableView2: UITableView!
+
     
     var allData = ["","","","","","","","","","","","","","","","",""]
     var deviceNames = [String]()
@@ -54,7 +54,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         if central.state == CBManagerState.poweredOn {
             print("BLE STATE ON")
             deviceNames.removeAll()
-            central.scanForPeripherals(withServices: arrayOfServices, options: nil)
+            central.scanForPeripherals(withServices: nil, options: nil)
         }
         else {
             print("BLE PROBLEM")
@@ -146,8 +146,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
             self.allData[14] = String("Soil Temperature: \(soilTemperature) °C")
             self.allData[15] = String("mu_mm: \(mu_mm)")
             self.allData[16] = String("mu_id: \(mu_id)")
-            self.tableView2.reloadData()
-            
+
             if (characteristic.uuid) == CBUUID(string: "FA2AF5EC-E01F-11EC-9D64-0242AC120002"){
                 print("I READ WRITE VALUE")
                 let currentValue = characteristic.value
@@ -203,8 +202,6 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         tableView1.delegate = self
         tableView1.dataSource = self
         
-        tableView2.delegate = self
-        tableView2.dataSource = self
         
         centralManager = CBCentralManager(delegate: self, queue: nil)
         
