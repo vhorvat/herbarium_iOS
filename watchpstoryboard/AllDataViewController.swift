@@ -11,8 +11,11 @@ class AllDataViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        if ((Shared.instance.peripheral?.name) != nil){
+            print(Shared.instance.peripheral.name)
+        } else {
+            print("Not connected")
+        }
     }
     
 

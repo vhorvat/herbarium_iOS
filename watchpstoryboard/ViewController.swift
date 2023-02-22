@@ -11,6 +11,12 @@ import CoreLocation
 import UserNotifications
 import Foundation
 
+class Shared {
+    private init(){ }
+    static let instance = Shared()
+    var bleManager: CBCentralManager!
+    var peripheral: CBPeripheral!
+}
 
 class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate {
     
@@ -19,8 +25,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     
     var allData = ["","","","","","","","","","","","","","","","",""]
     var deviceNames = [String]()
-    var centralManager: CBCentralManager!
-    var myPeripheral: CBPeripheral!
+
     var wPeripheral: CBPeripheral!
     var wCharacteristic: CBCharacteristic!
     
@@ -33,6 +38,10 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     var currentConnectedName = "NULL"
     var stateOfDoors = "1"
     var currentTemperature = 0
+    
+    var centralManager = Shared.instance.bleManager
+    var myPeripheral = Shared.instance.peripheral
+    
     
     
     func scheduleNotification(){
@@ -76,7 +85,8 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         print("Spajam se...")
-        self.myPeripheral.discoverServices(nil)
+        Shared.instance.peripheral = myPeripheral
+        self.myPeripheral?.discoverServices(nil)
     }
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
@@ -217,10 +227,10 @@ extension ViewController: UITableViewDelegate{
         
         self.myPeripheral = allBluetoothPeripherals[indexPath.row]
         
-        nameToShowLabel.text = myPeripheral.name //UPDATE NAME
+        nameToShowLabel.text = myPeripheral?.name //UPDATE NAME
         
-        centralManager.stopScan()
-        centralManager.connect(allBluetoothPeripherals[indexPath.row], options: nil)
+        centralManager?.stopScan()
+        centralManager?.connect(allBluetoothPeripherals[indexPath.row], options: nil)
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
