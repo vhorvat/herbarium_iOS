@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "kapljice.png",
+      "filename" : "metan.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "kapljice-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "kapljice-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

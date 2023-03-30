@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "thermometer-tempeature-celsius-scale-weather-forecast-61168.png",
+      "filename" : "pm_icon_176805.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "thermometer-tempeature-celsius-scale-weather-forecast-61166.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "thermometer-tempeature-celsius-scale-weather-forecast-61167.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

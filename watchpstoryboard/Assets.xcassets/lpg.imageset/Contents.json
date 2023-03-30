@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "tlak zraka.png",
+      "filename" : "lpg.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "tlak zraka-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "tlak zraka-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

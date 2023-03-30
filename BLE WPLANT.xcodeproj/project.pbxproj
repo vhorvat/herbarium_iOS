@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D03D000729D0E72F009ACA5D /* CusomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03D000629D0E72F009ACA5D /* CusomTableViewCell.swift */; };
 		D0F58DA02974742200433FC6 /* PlotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F58D9F2974742200433FC6 /* PlotViewController.swift */; };
 		D0F58DA229747FA700433FC6 /* AllDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F58DA129747FA700433FC6 /* AllDataViewController.swift */; };
 		FC3C0EE82805B2C000742F24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C0EE72805B2C000742F24 /* AppDelegate.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D03D000629D0E72F009ACA5D /* CusomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CusomTableViewCell.swift; sourceTree = "<group>"; };
 		D0F58D9F2974742200433FC6 /* PlotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotViewController.swift; sourceTree = "<group>"; };
 		D0F58DA129747FA700433FC6 /* AllDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDataViewController.swift; sourceTree = "<group>"; };
 		FC3C0EE42805B2C000742F24 /* BLE WPLANT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BLE WPLANT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +114,7 @@
 				FC3C0EEB2805B2C000742F24 /* ViewController.swift */,
 				D0F58D9F2974742200433FC6 /* PlotViewController.swift */,
 				D0F58DA129747FA700433FC6 /* AllDataViewController.swift */,
+				D03D000629D0E72F009ACA5D /* CusomTableViewCell.swift */,
 			);
 			path = watchpstoryboard;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0F58DA02974742200433FC6 /* PlotViewController.swift in Sources */,
+				D03D000729D0E72F009ACA5D /* CusomTableViewCell.swift in Sources */,
 				FC3C0EEC2805B2C000742F24 /* ViewController.swift in Sources */,
 				FC3C0EE82805B2C000742F24 /* AppDelegate.swift in Sources */,
 				FC3C0EEA2805B2C000742F24 /* SceneDelegate.swift in Sources */,

@@ -15,13 +15,51 @@ extension Date {
     }
 }
 
-class AllDataViewController: UIViewController {
+class AllDataViewController: UIViewController, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        data.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let measurment = data[indexPath.row]
+        let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CusomTableViewCell
+        cell.label.text = measurment.title
+        cell.imageView?.image = UIImage(named: measurment.imageName)
+        return cell
+    }
+    
     
     @IBOutlet weak var current_time: UILabel!
     @IBOutlet weak var current_date: UILabel!
+    @IBOutlet weak var table: UITableView!
+    
+    struct Measurment {
+        let title: String
+        let imageName: String
+    }
+    
+    let data: [Measurment] = [
+    Measurment(title: "Temperatura", imageName: "termometar"),
+    Measurment(title: "Vlaga zraka", imageName: "vlaga"),
+    Measurment(title: "Dim", imageName: "smoke"),
+    Measurment(title: "Osvijetljenje", imageName: "svijetlo"),
+    Measurment(title: "Vlažnost tla", imageName: "vlaznost_tla"),
+    Measurment(title: "Hlapljivi organski spojevi", imageName: "voc"),
+    Measurment(title: "Sumpor", imageName: "sumpor"),
+    Measurment(title: "Tlak zraka", imageName: "tlak"),
+    Measurment(title: "Benzen", imageName: "benzen"),
+    Measurment(title: "PM2.5", imageName: "pm2.5"),
+    Measurment(title: "Ugljični monoksid (CO)", imageName: "monoksid"),
+    Measurment(title: "Metan (CH4)", imageName: "metan"),
+    Measurment(title: "LPG", imageName: "lpg"),
+    Measurment(title: "NH3", imageName: "nh3"),
+    Measurment(title: "Ugljikov dioksid (CO2)", imageName: "dioksid"),
+    Measurment(title: "Ozon (O3)", imageName: "ozone"),
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        table.dataSource = self
         
         let date = Date()
         let calendar = Calendar.current
