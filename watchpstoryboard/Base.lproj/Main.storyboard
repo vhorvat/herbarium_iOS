@@ -13,228 +13,306 @@
         <!--TemperatureViewController-->
         <scene sceneID="b4p-Cb-yEZ">
             <objects>
-                <viewController id="XnX-V9-Xm6" userLabel="TemperatureViewController" sceneMemberID="viewController">
+                <viewController id="XnX-V9-Xm6" userLabel="TemperatureViewController" customClass="temperatura_ViewController" customModule="BLE_WPLANT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vig-Ys-jgi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperatura" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjR-TD-ohV">
+                                <rect key="frame" x="164" y="162" width="186" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="E5s-uD-Hnf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="termometar_BIG" translatesAutoresizingMaskIntoConstraints="NO" id="yja-k2-51w">
+                                <rect key="frame" x="34" y="122" width="122" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="k3o-jP-FzL"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bWh-ha-6Jv">
+                                <rect key="frame" x="34" y="266" width="360" height="198"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trenutna temperatura zraka: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYs-Fn-IIG">
+                                <rect key="frame" x="38" y="472" width="237" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="lwd-4i-Frb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uYs-Fn-IIG" firstAttribute="top" secondItem="bWh-ha-6Jv" secondAttribute="bottom" constant="8" symbolic="YES" id="0IC-ZJ-aPy"/>
+                            <constraint firstItem="jjR-TD-ohV" firstAttribute="top" secondItem="lwd-4i-Frb" secondAttribute="top" constant="70" id="8eF-J5-DM0"/>
+                            <constraint firstItem="bWh-ha-6Jv" firstAttribute="top" secondItem="yja-k2-51w" secondAttribute="bottom" constant="22" id="LFc-lO-f7M"/>
+                            <constraint firstItem="jjR-TD-ohV" firstAttribute="leading" secondItem="yja-k2-51w" secondAttribute="trailing" constant="8" id="Qcz-AT-VXt"/>
+                            <constraint firstItem="yja-k2-51w" firstAttribute="top" secondItem="lwd-4i-Frb" secondAttribute="top" constant="30" id="Shi-y6-K4C"/>
+                            <constraint firstItem="yja-k2-51w" firstAttribute="leading" secondItem="bWh-ha-6Jv" secondAttribute="leading" id="U3f-RT-AZ6"/>
+                            <constraint firstItem="yja-k2-51w" firstAttribute="leading" secondItem="lwd-4i-Frb" secondAttribute="leading" constant="34" id="UUc-rc-AhT"/>
+                            <constraint firstItem="uYs-Fn-IIG" firstAttribute="leading" secondItem="lwd-4i-Frb" secondAttribute="leading" constant="38" id="ch9-PC-4Zm"/>
+                            <constraint firstItem="lwd-4i-Frb" firstAttribute="bottom" secondItem="bWh-ha-6Jv" secondAttribute="bottom" constant="349" id="k1U-Jc-UHL"/>
+                            <constraint firstItem="yja-k2-51w" firstAttribute="centerY" secondItem="jjR-TD-ohV" secondAttribute="centerY" id="kDj-li-hAX"/>
+                            <constraint firstItem="lwd-4i-Frb" firstAttribute="trailing" secondItem="jjR-TD-ohV" secondAttribute="trailing" constant="64" id="sgx-MO-Lca"/>
+                            <constraint firstItem="lwd-4i-Frb" firstAttribute="trailing" secondItem="bWh-ha-6Jv" secondAttribute="trailing" constant="20" id="yda-2a-46n"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zny-vL-eeA"/>
+                    <connections>
+                        <outlet property="temepraturaBIGicon" destination="yja-k2-51w" id="5ym-dz-kES"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h8I-JG-5Wu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1924" y="1173"/>
+            <point key="canvasLocation" x="-1924.6376811594205" y="1172.5446428571429"/>
         </scene>
-        <!--View Controller-->
+        <!--Vlaga View Controller-->
         <scene sceneID="rSN-oN-QvH">
             <objects>
-                <viewController id="pU9-uX-iD7" sceneMemberID="viewController">
+                <viewController id="pU9-uX-iD7" customClass="vlaga_ViewController" customModule="BLE_WPLANT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HrR-sh-GMZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="XxX-uq-qUU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Ubu-kD-jFG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="715-cl-JxP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1157" y="1173"/>
         </scene>
-        <!--View Controller-->
+        <!--Dim View Controller-->
         <scene sceneID="Z13-dR-Rd2">
             <objects>
-                <viewController id="tiP-75-T26" sceneMemberID="viewController">
+                <viewController id="tiP-75-T26" customClass="dim_ViewController" customModule="BLE_WPLANT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UjJ-KY-3SE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="CwE-d7-Wo2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="eam-P2-liV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="txB-OF-9bD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-370" y="1173"/>
         </scene>
-        <!--View Controller-->
+        <!--Osvijetljenje View Controller-->
         <scene sceneID="upe-dT-DyV">
             <objects>
-                <viewController id="gYK-Oh-ITd" sceneMemberID="viewController">
+                <viewController id="gYK-Oh-ITd" customClass="osvijetljenje_ViewController" customModule="BLE_WPLANT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="otq-B5-kwO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="ufg-Bs-qeP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="OhB-kV-w1H"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AnD-eN-xr4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="377" y="1173"/>
         </scene>
-        <!--View Controller-->
+        <!--Vlaznost View Controller-->
         <scene sceneID="taA-Ao-dpA">
             <objects>
-                <viewController id="CG6-hY-fub" sceneMemberID="viewController">
+                <viewController id="CG6-hY-fub" customClass="vlaznost_ViewController" customModule="BLE_WPLANT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GcE-B4-Q0s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Ug4-Js-FEs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="tkM-Kg-PUj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f4h-Ap-Tqs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1139" y="1173"/>
+            <point key="canvasLocation" x="1138" y="1173"/>
         </scene>
-        <!--View Controller-->
+        <!--Hoc View Controller-->
         <scene sceneID="87k-DA-RkD">
             <objects>
-                <viewController id="pKK-4E-3h1" sceneMemberID="viewController">
+                <viewController id="pKK-4E-3h1" customClass="hoc_ViewController" customModule="BLE_WPLANT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gaj-BL-8PL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="kGX-U1-2tR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="RMA-vd-QxY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oDV-zt-eMh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1925" y="1884"/>
         </scene>
-        <!--View Controller-->
+        <!--Co View Controller-->
         <scene sceneID="9ZX-s3-1JW">
             <objects>
-                <viewController id="XeS-UX-a0b" sceneMemberID="viewController">
+                <viewController id="XeS-UX-a0b" customClass="co_ViewController" customModule="BLE_WPLANT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zfb-Hf-8ti">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="USu-80-AwB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Osz-Me-Bwb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15m-64-aSe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1925" y="2579"/>
         </scene>
-        <!--View Controller-->
+        <!--Ch4 View Controller-->
         <scene sceneID="qVy-uw-LwE">
             <objects>
-                <viewController id="GTK-k6-fx3" sceneMemberID="viewController">
+                <viewController id="GTK-k6-fx3" customClass="ch4_ViewController" customModule="BLE_WPLANT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="54F-sP-FVp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Ipd-ST-7a4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="w25-3t-WJO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O2l-wi-X6E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1158" y="2579"/>
         </scene>
-        <!--View Controller-->
+        <!--Lpg View Controller-->
         <scene sceneID="2zr-8M-2qp">
             <objects>
-                <viewController id="HMx-dt-Tin" sceneMemberID="viewController">
+                <viewController id="HMx-dt-Tin" customClass="lpg_ViewController" customModule="BLE_WPLANT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wap-pm-ECs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="ynf-xP-Mug"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="1xy-h5-MEs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vj4-0a-gmM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-371" y="2579"/>
         </scene>
-        <!--View Controller-->
+        <!--Nh3 View Controller-->
         <scene sceneID="4xr-iJ-IfE">
             <objects>
-                <viewController id="HFH-a8-xzB" sceneMemberID="viewController">
+                <viewController id="HFH-a8-xzB" customClass="nh3_ViewController" customModule="BLE_WPLANT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1r3-xI-khZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="i8g-IT-n73"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="3hH-qr-UdT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pA5-aE-vi5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="377" y="2579"/>
         </scene>
-        <!--View Controller-->
+        <!--Co2 View Controller-->
         <scene sceneID="Jwm-N8-TEC">
             <objects>
-                <viewController id="SW5-t1-OZR" sceneMemberID="viewController">
+                <viewController id="SW5-t1-OZR" customClass="co2_ViewController" customModule="BLE_WPLANT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XAC-Ur-Tq3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="LKE-wq-P3u"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="UHO-6Z-qeC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X26-pk-vnc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1138" y="2579"/>
         </scene>
-        <!--View Controller-->
+        <!--Sumpor View Controller-->
         <scene sceneID="j48-2N-UeJ">
             <objects>
-                <viewController id="dYZ-g3-gmH" sceneMemberID="viewController">
+                <viewController id="dYZ-g3-gmH" customClass="sumpor_ViewController" customModule="BLE_WPLANT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Js4-LI-2g1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Hd7-D8-881"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fOH-vl-YWB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R4V-lJ-pos" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1158" y="1884"/>
         </scene>
-        <!--View Controller-->
+        <!--Tlak View Controller-->
         <scene sceneID="6pm-Ab-h8d">
             <objects>
-                <viewController id="N45-pz-nbp" sceneMemberID="viewController">
+                <viewController id="N45-pz-nbp" customClass="tlak_ViewController" customModule="BLE_WPLANT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8US-Ii-SIQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="FwS-jN-OaF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Axr-ts-Yz2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bwd-mg-Fah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-371" y="1892"/>
         </scene>
-        <!--View Controller-->
+        <!--Benzen View Controller-->
         <scene sceneID="gNm-P3-qpQ">
             <objects>
-                <viewController id="4Lw-is-pEB" sceneMemberID="viewController">
+                <viewController id="4Lw-is-pEB" customClass="benzen_ViewController" customModule="BLE_WPLANT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dPc-Fy-Ihb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="uXe-y5-Twv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="FzD-dC-vhD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3GW-3b-eN8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="377" y="1892"/>
         </scene>
-        <!--View Controller-->
+        <!--Pm25 View Controller-->
         <scene sceneID="tTK-5f-1eE">
             <objects>
-                <viewController id="OBo-xu-vW8" sceneMemberID="viewController">
+                <viewController id="OBo-xu-vW8" customClass="pm25_ViewController" customModule="BLE_WPLANT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oOe-ud-fgb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="rAI-rC-6Au"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="nHw-eY-20s"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQ5-HZ-WXX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1138" y="1884"/>
+            <point key="canvasLocation" x="1139" y="1892"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0Pw-H1-0qm">
+            <objects>
+                <viewController id="Xh4-Dd-LgC" customClass="o3_ViewController" customModule="BLE_WPLANT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S7B-rq-qhM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Jaw-uQ-f5M"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lue-Ub-uQg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="onI-9C-Pos" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2075" y="1828"/>
         </scene>
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
@@ -422,7 +500,7 @@
                                                         <constraint firstAttribute="height" constant="50" id="iaZ-RY-SkR"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" preservesSuperviewLayoutMargins="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="250" translatesAutoresizingMaskIntoConstraints="NO" id="zzT-lo-0rI">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" preservesSuperviewLayoutMargins="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="250" translatesAutoresizingMaskIntoConstraints="NO" id="zzT-lo-0rI">
                                                     <rect key="frame" x="104" y="22" width="270" height="88"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="270" id="AuT-RM-C4M"/>
@@ -472,6 +550,21 @@
                         <outlet property="current_time" destination="WZk-F6-XuH" id="fhc-zs-QtZ"/>
                         <outlet property="table" destination="0h4-vJ-m7o" id="y2a-9E-Sqt"/>
                         <segue destination="XnX-V9-Xm6" kind="show" identifier="temperatura_view" id="ais-oV-GiX"/>
+                        <segue destination="pU9-uX-iD7" kind="show" identifier="vlaga_view" id="JX2-Bp-CaX"/>
+                        <segue destination="tiP-75-T26" kind="show" identifier="dim_view" id="Q5M-KJ-i9h"/>
+                        <segue destination="gYK-Oh-ITd" kind="show" identifier="osvijetljenje_view" id="GYf-f8-pja"/>
+                        <segue destination="CG6-hY-fub" kind="show" identifier="vlaznost_view" id="Oyw-KE-vcq"/>
+                        <segue destination="dYZ-g3-gmH" kind="show" identifier="sumpor_view" id="xsQ-qW-63B"/>
+                        <segue destination="N45-pz-nbp" kind="show" identifier="tlak_view" id="cO4-1U-4su"/>
+                        <segue destination="4Lw-is-pEB" kind="show" identifier="benzen_view" id="PIb-9j-WFg"/>
+                        <segue destination="OBo-xu-vW8" kind="show" identifier="pm25_view" id="oKD-n9-4Z7"/>
+                        <segue destination="XeS-UX-a0b" kind="show" identifier="co_view" id="tri-hu-tQA"/>
+                        <segue destination="GTK-k6-fx3" kind="show" identifier="ch4_view" id="p15-Z2-POl"/>
+                        <segue destination="HMx-dt-Tin" kind="show" identifier="lpg_View" id="ZI6-Ie-Lm1"/>
+                        <segue destination="HFH-a8-xzB" kind="show" identifier="nh3_view" id="qkf-sr-RPD"/>
+                        <segue destination="SW5-t1-OZR" kind="show" identifier="co2_view" id="QA0-2N-rvt"/>
+                        <segue destination="pKK-4E-3h1" kind="show" identifier="hoc_view" id="Lp6-UM-Koc"/>
+                        <segue destination="Xh4-Dd-LgC" kind="show" identifier="o3_view" id="qIX-C2-IcH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vem-bx-jci" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -536,6 +629,7 @@
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="info.square" catalog="system" width="128" height="114"/>
         <image name="rectangle.inset.filled.and.person.filled" catalog="system" width="128" height="87"/>
+        <image name="termometar_BIG" width="512" height="512"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

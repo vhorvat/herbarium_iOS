@@ -8,6 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		D03D000729D0E72F009ACA5D /* CusomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03D000629D0E72F009ACA5D /* CusomTableViewCell.swift */; };
+		D03D000929D8AA7B009ACA5D /* temperatura_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03D000829D8AA7B009ACA5D /* temperatura_ViewController.swift */; };
+		D03D000B29D8ABDA009ACA5D /* vlaga_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03D000A29D8ABDA009ACA5D /* vlaga_ViewController.swift */; };
+		D03D000D29D8ABEE009ACA5D /* dim_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03D000C29D8ABEE009ACA5D /* dim_ViewController.swift */; };
+		D03D000F29D8ABFF009ACA5D /* osvijetljenje_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03D000E29D8ABFF009ACA5D /* osvijetljenje_ViewController.swift */; };
+		D03D001129D8AC0F009ACA5D /* vlaznost_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03D001029D8AC0F009ACA5D /* vlaznost_ViewController.swift */; };
+		D03D001329D8AC2A009ACA5D /* hoc_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03D001229D8AC2A009ACA5D /* hoc_ViewController.swift */; };
+		D03D001529D8AD49009ACA5D /* sumpor_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03D001429D8AD49009ACA5D /* sumpor_ViewController.swift */; };
+		D03D001729D8AD55009ACA5D /* tlak_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03D001629D8AD55009ACA5D /* tlak_ViewController.swift */; };
+		D03D001929D8AD68009ACA5D /* benzen_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03D001829D8AD68009ACA5D /* benzen_ViewController.swift */; };
+		D03D001B29D8AD79009ACA5D /* pm25_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03D001A29D8AD79009ACA5D /* pm25_ViewController.swift */; };
+		D03D001D29D8AD88009ACA5D /* ch4_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03D001C29D8AD88009ACA5D /* ch4_ViewController.swift */; };
+		D03D001F29D8AD9A009ACA5D /* lpg_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03D001E29D8AD9A009ACA5D /* lpg_ViewController.swift */; };
+		D03D002129D8ADA9009ACA5D /* nh3_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03D002029D8ADA9009ACA5D /* nh3_ViewController.swift */; };
+		D03D002329D8ADB9009ACA5D /* co2_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03D002229D8ADB9009ACA5D /* co2_ViewController.swift */; };
+		D03D002529D8ADD1009ACA5D /* o3_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03D002429D8ADD1009ACA5D /* o3_ViewController.swift */; };
+		D03D002729D8AF54009ACA5D /* co_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03D002629D8AF54009ACA5D /* co_ViewController.swift */; };
 		D0F58DA02974742200433FC6 /* PlotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F58D9F2974742200433FC6 /* PlotViewController.swift */; };
 		D0F58DA229747FA700433FC6 /* AllDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F58DA129747FA700433FC6 /* AllDataViewController.swift */; };
 		FC3C0EE82805B2C000742F24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C0EE72805B2C000742F24 /* AppDelegate.swift */; };
@@ -40,6 +56,22 @@
 
 /* Begin PBXFileReference section */
 		D03D000629D0E72F009ACA5D /* CusomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CusomTableViewCell.swift; sourceTree = "<group>"; };
+		D03D000829D8AA7B009ACA5D /* temperatura_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temperatura_ViewController.swift; sourceTree = "<group>"; };
+		D03D000A29D8ABDA009ACA5D /* vlaga_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vlaga_ViewController.swift; sourceTree = "<group>"; };
+		D03D000C29D8ABEE009ACA5D /* dim_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dim_ViewController.swift; sourceTree = "<group>"; };
+		D03D000E29D8ABFF009ACA5D /* osvijetljenje_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = osvijetljenje_ViewController.swift; sourceTree = "<group>"; };
+		D03D001029D8AC0F009ACA5D /* vlaznost_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vlaznost_ViewController.swift; sourceTree = "<group>"; };
+		D03D001229D8AC2A009ACA5D /* hoc_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hoc_ViewController.swift; sourceTree = "<group>"; };
+		D03D001429D8AD49009ACA5D /* sumpor_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sumpor_ViewController.swift; sourceTree = "<group>"; };
+		D03D001629D8AD55009ACA5D /* tlak_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tlak_ViewController.swift; sourceTree = "<group>"; };
+		D03D001829D8AD68009ACA5D /* benzen_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = benzen_ViewController.swift; sourceTree = "<group>"; };
+		D03D001A29D8AD79009ACA5D /* pm25_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pm25_ViewController.swift; sourceTree = "<group>"; };
+		D03D001C29D8AD88009ACA5D /* ch4_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ch4_ViewController.swift; sourceTree = "<group>"; };
+		D03D001E29D8AD9A009ACA5D /* lpg_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lpg_ViewController.swift; sourceTree = "<group>"; };
+		D03D002029D8ADA9009ACA5D /* nh3_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nh3_ViewController.swift; sourceTree = "<group>"; };
+		D03D002229D8ADB9009ACA5D /* co2_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = co2_ViewController.swift; sourceTree = "<group>"; };
+		D03D002429D8ADD1009ACA5D /* o3_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = o3_ViewController.swift; sourceTree = "<group>"; };
+		D03D002629D8AF54009ACA5D /* co_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = co_ViewController.swift; sourceTree = "<group>"; };
 		D0F58D9F2974742200433FC6 /* PlotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotViewController.swift; sourceTree = "<group>"; };
 		D0F58DA129747FA700433FC6 /* AllDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDataViewController.swift; sourceTree = "<group>"; };
 		FC3C0EE42805B2C000742F24 /* BLE WPLANT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BLE WPLANT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +147,22 @@
 				D0F58D9F2974742200433FC6 /* PlotViewController.swift */,
 				D0F58DA129747FA700433FC6 /* AllDataViewController.swift */,
 				D03D000629D0E72F009ACA5D /* CusomTableViewCell.swift */,
+				D03D000829D8AA7B009ACA5D /* temperatura_ViewController.swift */,
+				D03D000A29D8ABDA009ACA5D /* vlaga_ViewController.swift */,
+				D03D000C29D8ABEE009ACA5D /* dim_ViewController.swift */,
+				D03D000E29D8ABFF009ACA5D /* osvijetljenje_ViewController.swift */,
+				D03D001029D8AC0F009ACA5D /* vlaznost_ViewController.swift */,
+				D03D001229D8AC2A009ACA5D /* hoc_ViewController.swift */,
+				D03D001429D8AD49009ACA5D /* sumpor_ViewController.swift */,
+				D03D001629D8AD55009ACA5D /* tlak_ViewController.swift */,
+				D03D001829D8AD68009ACA5D /* benzen_ViewController.swift */,
+				D03D001A29D8AD79009ACA5D /* pm25_ViewController.swift */,
+				D03D001C29D8AD88009ACA5D /* ch4_ViewController.swift */,
+				D03D001E29D8AD9A009ACA5D /* lpg_ViewController.swift */,
+				D03D002029D8ADA9009ACA5D /* nh3_ViewController.swift */,
+				D03D002229D8ADB9009ACA5D /* co2_ViewController.swift */,
+				D03D002429D8ADD1009ACA5D /* o3_ViewController.swift */,
+				D03D002629D8AF54009ACA5D /* co_ViewController.swift */,
 			);
 			path = watchpstoryboard;
 			sourceTree = "<group>";
@@ -267,11 +315,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D03D002729D8AF54009ACA5D /* co_ViewController.swift in Sources */,
+				D03D000929D8AA7B009ACA5D /* temperatura_ViewController.swift in Sources */,
+				D03D001129D8AC0F009ACA5D /* vlaznost_ViewController.swift in Sources */,
+				D03D000F29D8ABFF009ACA5D /* osvijetljenje_ViewController.swift in Sources */,
+				D03D001329D8AC2A009ACA5D /* hoc_ViewController.swift in Sources */,
+				D03D001F29D8AD9A009ACA5D /* lpg_ViewController.swift in Sources */,
+				D03D002529D8ADD1009ACA5D /* o3_ViewController.swift in Sources */,
+				D03D002329D8ADB9009ACA5D /* co2_ViewController.swift in Sources */,
+				D03D001729D8AD55009ACA5D /* tlak_ViewController.swift in Sources */,
 				D0F58DA02974742200433FC6 /* PlotViewController.swift in Sources */,
+				D03D001B29D8AD79009ACA5D /* pm25_ViewController.swift in Sources */,
+				D03D001D29D8AD88009ACA5D /* ch4_ViewController.swift in Sources */,
 				D03D000729D0E72F009ACA5D /* CusomTableViewCell.swift in Sources */,
 				FC3C0EEC2805B2C000742F24 /* ViewController.swift in Sources */,
 				FC3C0EE82805B2C000742F24 /* AppDelegate.swift in Sources */,
+				D03D001529D8AD49009ACA5D /* sumpor_ViewController.swift in Sources */,
+				D03D001929D8AD68009ACA5D /* benzen_ViewController.swift in Sources */,
 				FC3C0EEA2805B2C000742F24 /* SceneDelegate.swift in Sources */,
+				D03D000D29D8ABEE009ACA5D /* dim_ViewController.swift in Sources */,
+				D03D002129D8ADA9009ACA5D /* nh3_ViewController.swift in Sources */,
+				D03D000B29D8ABDA009ACA5D /* vlaga_ViewController.swift in Sources */,
 				D0F58DA229747FA700433FC6 /* AllDataViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -35,7 +35,36 @@ class AllDataViewController: UIViewController, UITableViewDataSource, UITableVie
         switch indexPath.row {
         case 1:
             segueIdentifier = "temperatura_view"
-            
+        case 2:
+            segueIdentifier = "vlaga_view"
+        case 3:
+            segueIdentifier = "dim_view"
+        case 4:
+            segueIdentifier = "osvijetljenje_view"
+        case 5:
+            segueIdentifier = "vlaznost_view"
+        case 6:
+            segueIdentifier = "hoc_view"
+        case 7:
+            segueIdentifier = "sumpor_view"
+        case 8:
+            segueIdentifier = "tlak_view"
+        case 9:
+            segueIdentifier = "benzen_view"
+        case 10:
+            segueIdentifier = "pm25_view"
+        case 11:
+            segueIdentifier = "co_view"
+        case 12:
+            segueIdentifier = "ch4_view"
+        case 13:
+            segueIdentifier = "lpg_view"
+        case 14:
+            segueIdentifier = "nh3_view"
+        case 15:
+            segueIdentifier = "co2_view"
+        case 16:
+            segueIdentifier = "o3_view"
         default:
             segueIdentifier = "temperatura_view"
         }
