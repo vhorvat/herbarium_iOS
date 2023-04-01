@@ -15,7 +15,8 @@ extension Date {
     }
 }
 
-class AllDataViewController: UIViewController, UITableViewDataSource {
+class AllDataViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         data.count
     }
@@ -27,6 +28,20 @@ class AllDataViewController: UIViewController, UITableViewDataSource {
         cell.imageView?.image = UIImage(named: measurment.imageName)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("DidSelectRow")
+        let segueIdentifier: String
+        switch indexPath.row {
+        case 1:
+            segueIdentifier = "temperatura_view"
+            
+        default:
+            segueIdentifier = "temperatura_view"
+        }
+        self.performSegue(withIdentifier: segueIdentifier, sender: self)
+    }
+
     
     
     @IBOutlet weak var current_time: UILabel!
@@ -60,6 +75,7 @@ class AllDataViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         table.dataSource = self
+        table.delegate = self
         
         let date = Date()
         let calendar = Calendar.current
