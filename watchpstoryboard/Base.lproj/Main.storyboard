@@ -18,31 +18,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperatura" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjR-TD-ohV">
-                                <rect key="frame" x="164" y="162" width="186" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="E5s-uD-Hnf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="termometar_BIG" translatesAutoresizingMaskIntoConstraints="NO" id="yja-k2-51w">
-                                <rect key="frame" x="34" y="122" width="122" height="122"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="122" id="k3o-jP-FzL"/>
-                                </constraints>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bWh-ha-6Jv">
-                                <rect key="frame" x="34" y="266" width="360" height="198"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWh-ha-6Jv">
+                                <rect key="frame" x="30" y="222" width="360" height="198"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="198" id="q8d-X9-rTH"/>
+                                </constraints>
                                 <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2h-sA-FJK">
+                                <rect key="frame" x="20" y="576" width="374" height="178"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kretanje temeperature zraka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5L-DD-QLX">
+                                <rect key="frame" x="94" y="537" width="241" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperatura" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjR-TD-ohV">
+                                <rect key="frame" x="150" y="132" width="186" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="oTT-pA-fHi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="termometar" translatesAutoresizingMaskIntoConstraints="NO" id="yja-k2-51w">
+                                <rect key="frame" x="20" y="92" width="122" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="u6J-TR-ECG"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trenutna temperatura zraka: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYs-Fn-IIG">
-                                <rect key="frame" x="38" y="472" width="237" height="21"/>
+                                <rect key="frame" x="45" y="438" width="237" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -51,22 +64,29 @@
                         <viewLayoutGuide key="safeArea" id="lwd-4i-Frb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="uYs-Fn-IIG" firstAttribute="top" secondItem="bWh-ha-6Jv" secondAttribute="bottom" constant="8" symbolic="YES" id="0IC-ZJ-aPy"/>
-                            <constraint firstItem="jjR-TD-ohV" firstAttribute="top" secondItem="lwd-4i-Frb" secondAttribute="top" constant="70" id="8eF-J5-DM0"/>
-                            <constraint firstItem="bWh-ha-6Jv" firstAttribute="top" secondItem="yja-k2-51w" secondAttribute="bottom" constant="22" id="LFc-lO-f7M"/>
-                            <constraint firstItem="jjR-TD-ohV" firstAttribute="leading" secondItem="yja-k2-51w" secondAttribute="trailing" constant="8" id="Qcz-AT-VXt"/>
-                            <constraint firstItem="yja-k2-51w" firstAttribute="top" secondItem="lwd-4i-Frb" secondAttribute="top" constant="30" id="Shi-y6-K4C"/>
-                            <constraint firstItem="yja-k2-51w" firstAttribute="leading" secondItem="bWh-ha-6Jv" secondAttribute="leading" id="U3f-RT-AZ6"/>
-                            <constraint firstItem="yja-k2-51w" firstAttribute="leading" secondItem="lwd-4i-Frb" secondAttribute="leading" constant="34" id="UUc-rc-AhT"/>
-                            <constraint firstItem="uYs-Fn-IIG" firstAttribute="leading" secondItem="lwd-4i-Frb" secondAttribute="leading" constant="38" id="ch9-PC-4Zm"/>
-                            <constraint firstItem="lwd-4i-Frb" firstAttribute="bottom" secondItem="bWh-ha-6Jv" secondAttribute="bottom" constant="349" id="k1U-Jc-UHL"/>
-                            <constraint firstItem="yja-k2-51w" firstAttribute="centerY" secondItem="jjR-TD-ohV" secondAttribute="centerY" id="kDj-li-hAX"/>
-                            <constraint firstItem="lwd-4i-Frb" firstAttribute="trailing" secondItem="jjR-TD-ohV" secondAttribute="trailing" constant="64" id="sgx-MO-Lca"/>
-                            <constraint firstItem="lwd-4i-Frb" firstAttribute="trailing" secondItem="bWh-ha-6Jv" secondAttribute="trailing" constant="20" id="yda-2a-46n"/>
+                            <constraint firstItem="yja-k2-51w" firstAttribute="leading" secondItem="bWh-ha-6Jv" secondAttribute="leading" constant="-10" id="0Od-Z7-IlB"/>
+                            <constraint firstItem="yja-k2-51w" firstAttribute="centerY" secondItem="jjR-TD-ohV" secondAttribute="centerY" id="0TJ-qB-Gd2"/>
+                            <constraint firstItem="H2h-sA-FJK" firstAttribute="leading" secondItem="Vig-Ys-jgi" secondAttribute="leadingMargin" id="2cM-GU-lpb"/>
+                            <constraint firstItem="H2h-sA-FJK" firstAttribute="top" secondItem="n5L-DD-QLX" secondAttribute="bottom" constant="18" id="6md-ch-nlk"/>
+                            <constraint firstItem="bWh-ha-6Jv" firstAttribute="top" secondItem="yja-k2-51w" secondAttribute="bottom" constant="8" id="Bl3-LM-nIm"/>
+                            <constraint firstItem="n5L-DD-QLX" firstAttribute="centerX" secondItem="H2h-sA-FJK" secondAttribute="centerX" constant="7.5" id="CeD-5U-BXR"/>
+                            <constraint firstItem="yja-k2-51w" firstAttribute="top" secondItem="lwd-4i-Frb" secondAttribute="top" id="DEH-Be-H7h"/>
+                            <constraint firstItem="lwd-4i-Frb" firstAttribute="trailing" secondItem="jjR-TD-ohV" secondAttribute="trailing" constant="78" id="FLv-HM-lEB"/>
+                            <constraint firstItem="H2h-sA-FJK" firstAttribute="trailing" secondItem="bWh-ha-6Jv" secondAttribute="trailing" constant="4" id="V65-mA-leB"/>
+                            <constraint firstItem="lwd-4i-Frb" firstAttribute="bottom" secondItem="H2h-sA-FJK" secondAttribute="bottom" constant="59" id="Yuc-Dp-fnC"/>
+                            <constraint firstItem="uYs-Fn-IIG" firstAttribute="leading" secondItem="lwd-4i-Frb" secondAttribute="leading" constant="45" id="c5U-eb-7pw"/>
+                            <constraint firstItem="yja-k2-51w" firstAttribute="leading" secondItem="lwd-4i-Frb" secondAttribute="leading" constant="20" id="df4-0C-JyQ"/>
+                            <constraint firstItem="H2h-sA-FJK" firstAttribute="top" secondItem="Vig-Ys-jgi" secondAttribute="top" constant="576" id="fhg-kE-4jM"/>
+                            <constraint firstItem="jjR-TD-ohV" firstAttribute="leading" secondItem="yja-k2-51w" secondAttribute="trailing" constant="8" id="hdc-VL-pA2"/>
+                            <constraint firstItem="n5L-DD-QLX" firstAttribute="leading" secondItem="lwd-4i-Frb" secondAttribute="leading" constant="94" id="m1w-on-8qz"/>
+                            <constraint firstItem="jjR-TD-ohV" firstAttribute="top" secondItem="lwd-4i-Frb" secondAttribute="top" constant="40" id="vFn-lw-aZS"/>
+                            <constraint firstItem="bWh-ha-6Jv" firstAttribute="trailing" secondItem="Vig-Ys-jgi" secondAttribute="trailingMargin" constant="-4" id="x4t-Gp-Q0t"/>
+                            <constraint firstItem="uYs-Fn-IIG" firstAttribute="top" secondItem="bWh-ha-6Jv" secondAttribute="bottom" constant="18" id="yZA-28-Qvh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zny-vL-eeA"/>
                     <connections>
+                        <outlet property="chartView" destination="H2h-sA-FJK" id="ECd-9D-2CO"/>
                         <outlet property="temepraturaBIGicon" destination="yja-k2-51w" id="5ym-dz-kES"/>
                     </connections>
                 </viewController>
@@ -81,14 +101,64 @@
                     <view key="view" contentMode="scaleToFill" id="HrR-sh-GMZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vlaga zraka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="239-Tp-nZX">
+                                <rect key="frame" x="150" y="132" width="186" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="RVR-iP-l3N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vlaga" translatesAutoresizingMaskIntoConstraints="NO" id="COq-Ay-Hjz">
+                                <rect key="frame" x="20" y="92" width="122" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="6pu-sL-fjS"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YJa-6u-ypw">
+                                <rect key="frame" x="20" y="576" width="374" height="178"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WE0-Kb-yBx">
+                                <rect key="frame" x="20" y="222" width="360" height="198"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="198" id="XXu-ie-TLy"/>
+                                </constraints>
+                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="XxX-uq-qUU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XxX-uq-qUU" firstAttribute="bottom" secondItem="YJa-6u-ypw" secondAttribute="bottom" constant="59" id="7O7-GF-CN6"/>
+                            <constraint firstItem="XxX-uq-qUU" firstAttribute="trailing" secondItem="239-Tp-nZX" secondAttribute="trailing" constant="78" id="GNn-DP-kS9"/>
+                            <constraint firstItem="WE0-Kb-yBx" firstAttribute="leading" secondItem="COq-Ay-Hjz" secondAttribute="leading" id="K3U-zR-F4R"/>
+                            <constraint firstItem="COq-Ay-Hjz" firstAttribute="centerY" secondItem="239-Tp-nZX" secondAttribute="centerY" id="TrT-wM-sAj"/>
+                            <constraint firstItem="COq-Ay-Hjz" firstAttribute="top" secondItem="XxX-uq-qUU" secondAttribute="top" id="Y3W-KL-h0L"/>
+                            <constraint firstItem="YJa-6u-ypw" firstAttribute="trailing" secondItem="HrR-sh-GMZ" secondAttribute="trailingMargin" id="ZMR-NL-qM8"/>
+                            <constraint firstItem="YJa-6u-ypw" firstAttribute="top" secondItem="HrR-sh-GMZ" secondAttribute="top" constant="576" id="c5y-ab-wzR"/>
+                            <constraint firstItem="WE0-Kb-yBx" firstAttribute="leading" secondItem="YJa-6u-ypw" secondAttribute="leading" id="kQp-Se-M6R"/>
+                            <constraint firstItem="XxX-uq-qUU" firstAttribute="trailing" secondItem="WE0-Kb-yBx" secondAttribute="trailing" constant="34" id="ka1-am-mmb"/>
+                            <constraint firstItem="COq-Ay-Hjz" firstAttribute="leading" secondItem="HrR-sh-GMZ" secondAttribute="leadingMargin" id="kyU-EM-AVN"/>
+                            <constraint firstItem="239-Tp-nZX" firstAttribute="leading" secondItem="COq-Ay-Hjz" secondAttribute="trailing" constant="8" id="oge-aC-Vn0"/>
+                            <constraint firstItem="239-Tp-nZX" firstAttribute="top" secondItem="XxX-uq-qUU" secondAttribute="top" constant="40" id="q1S-Wd-gMD"/>
+                            <constraint firstItem="WE0-Kb-yBx" firstAttribute="top" secondItem="COq-Ay-Hjz" secondAttribute="bottom" constant="8" id="zlc-kJ-imx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ubu-kD-jFG"/>
+                    <connections>
+                        <outlet property="chartView" destination="YJa-6u-ypw" id="eHf-k5-fe4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="715-cl-JxP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1157" y="1173"/>
+            <point key="canvasLocation" x="-1157.9710144927537" y="1172.5446428571429"/>
         </scene>
         <!--Dim View Controller-->
         <scene sceneID="Z13-dR-Rd2">
@@ -97,14 +167,64 @@
                     <view key="view" contentMode="scaleToFill" id="UjJ-KY-3SE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TgX-c4-Sqf">
+                                <rect key="frame" x="150" y="132" width="110" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="tJK-fw-hci"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smoke" translatesAutoresizingMaskIntoConstraints="NO" id="LUP-m3-Htz">
+                                <rect key="frame" x="20" y="92" width="122" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="fUS-4Y-4TN"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oX4-eb-wm6">
+                                <rect key="frame" x="20" y="576" width="374" height="178"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9zj-aW-8sb">
+                                <rect key="frame" x="20" y="222" width="360" height="198"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="198" id="RMT-8p-i6J"/>
+                                </constraints>
+                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="CwE-d7-Wo2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TgX-c4-Sqf" firstAttribute="top" secondItem="CwE-d7-Wo2" secondAttribute="top" constant="40" id="4UO-tW-afp"/>
+                            <constraint firstItem="CwE-d7-Wo2" firstAttribute="trailing" secondItem="9zj-aW-8sb" secondAttribute="trailing" constant="34" id="Ca9-qG-FDv"/>
+                            <constraint firstItem="9zj-aW-8sb" firstAttribute="leading" secondItem="LUP-m3-Htz" secondAttribute="leading" id="KEv-cw-RRF"/>
+                            <constraint firstItem="CwE-d7-Wo2" firstAttribute="trailing" secondItem="TgX-c4-Sqf" secondAttribute="trailing" constant="154" id="OEO-N4-R2T"/>
+                            <constraint firstItem="LUP-m3-Htz" firstAttribute="centerY" secondItem="TgX-c4-Sqf" secondAttribute="centerY" id="T40-pE-LtK"/>
+                            <constraint firstItem="9zj-aW-8sb" firstAttribute="top" secondItem="LUP-m3-Htz" secondAttribute="bottom" constant="8" id="ZWT-9w-trg"/>
+                            <constraint firstItem="oX4-eb-wm6" firstAttribute="top" secondItem="UjJ-KY-3SE" secondAttribute="top" constant="576" id="Zh8-J0-R94"/>
+                            <constraint firstItem="TgX-c4-Sqf" firstAttribute="leading" secondItem="LUP-m3-Htz" secondAttribute="trailing" constant="8" id="ezR-oM-Aze"/>
+                            <constraint firstItem="CwE-d7-Wo2" firstAttribute="bottom" secondItem="oX4-eb-wm6" secondAttribute="bottom" constant="59" id="gKl-RL-5bJ"/>
+                            <constraint firstItem="LUP-m3-Htz" firstAttribute="top" secondItem="CwE-d7-Wo2" secondAttribute="top" id="ocm-3N-lye"/>
+                            <constraint firstItem="9zj-aW-8sb" firstAttribute="leading" secondItem="oX4-eb-wm6" secondAttribute="leading" id="pnp-zN-2fG"/>
+                            <constraint firstItem="LUP-m3-Htz" firstAttribute="leading" secondItem="UjJ-KY-3SE" secondAttribute="leadingMargin" id="suX-i3-gjN"/>
+                            <constraint firstItem="oX4-eb-wm6" firstAttribute="trailing" secondItem="UjJ-KY-3SE" secondAttribute="trailingMargin" id="uso-0p-aLs"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eam-P2-liV"/>
+                    <connections>
+                        <outlet property="chartView" destination="oX4-eb-wm6" id="Y1P-Tc-UWN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="txB-OF-9bD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-370" y="1173"/>
+            <point key="canvasLocation" x="-371.01449275362324" y="1172.5446428571429"/>
         </scene>
         <!--Osvijetljenje View Controller-->
         <scene sceneID="upe-dT-DyV">
@@ -113,10 +233,60 @@
                     <view key="view" contentMode="scaleToFill" id="otq-B5-kwO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Osvijetljenje" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJy-Dd-vha">
+                                <rect key="frame" x="150" y="132" width="186" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="jbD-Ho-gjX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="svijetlo" translatesAutoresizingMaskIntoConstraints="NO" id="0uM-IT-0TS">
+                                <rect key="frame" x="20" y="92" width="122" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="xxe-Wc-e18"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7xf-G5-iNm">
+                                <rect key="frame" x="20" y="576" width="374" height="178"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="37X-cb-d0P">
+                                <rect key="frame" x="20" y="222" width="360" height="198"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="198" id="XjU-Xh-lXP"/>
+                                </constraints>
+                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ufg-Bs-qeP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7xf-G5-iNm" firstAttribute="top" secondItem="otq-B5-kwO" secondAttribute="top" constant="576" id="4NM-co-rns"/>
+                            <constraint firstItem="ufg-Bs-qeP" firstAttribute="trailing" secondItem="WJy-Dd-vha" secondAttribute="trailing" constant="78" id="GeR-Bs-lMP"/>
+                            <constraint firstItem="0uM-IT-0TS" firstAttribute="leading" secondItem="ufg-Bs-qeP" secondAttribute="leading" constant="20" id="Ho0-yK-YKl"/>
+                            <constraint firstItem="37X-cb-d0P" firstAttribute="top" secondItem="0uM-IT-0TS" secondAttribute="bottom" constant="8" id="IaN-q1-MU4"/>
+                            <constraint firstItem="ufg-Bs-qeP" firstAttribute="trailing" secondItem="37X-cb-d0P" secondAttribute="trailing" constant="34" id="MZY-b5-NjQ"/>
+                            <constraint firstItem="37X-cb-d0P" firstAttribute="leading" secondItem="7xf-G5-iNm" secondAttribute="leading" id="ZTM-7o-wVH"/>
+                            <constraint firstItem="0uM-IT-0TS" firstAttribute="top" secondItem="ufg-Bs-qeP" secondAttribute="top" id="bxV-ZI-O2W"/>
+                            <constraint firstItem="WJy-Dd-vha" firstAttribute="leading" secondItem="0uM-IT-0TS" secondAttribute="trailing" constant="8" id="k3m-Kq-9fn"/>
+                            <constraint firstItem="7xf-G5-iNm" firstAttribute="trailing" secondItem="otq-B5-kwO" secondAttribute="trailingMargin" id="kGg-Xp-SZh"/>
+                            <constraint firstItem="37X-cb-d0P" firstAttribute="leading" secondItem="0uM-IT-0TS" secondAttribute="leading" id="kgI-Kt-Q50"/>
+                            <constraint firstItem="0uM-IT-0TS" firstAttribute="centerY" secondItem="WJy-Dd-vha" secondAttribute="centerY" id="mNE-X0-oSn"/>
+                            <constraint firstItem="ufg-Bs-qeP" firstAttribute="bottom" secondItem="7xf-G5-iNm" secondAttribute="bottom" constant="59" id="oVj-Jx-iYj"/>
+                            <constraint firstItem="WJy-Dd-vha" firstAttribute="top" secondItem="ufg-Bs-qeP" secondAttribute="top" constant="40" id="v3P-0I-1UO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OhB-kV-w1H"/>
+                    <connections>
+                        <outlet property="chartView" destination="7xf-G5-iNm" id="Db0-rv-JNo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AnD-eN-xr4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -129,10 +299,54 @@
                     <view key="view" contentMode="scaleToFill" id="GcE-B4-Q0s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vlaznost tla" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gca-rK-SuQ">
+                                <rect key="frame" x="150" y="132" width="186" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="xjE-aP-MyR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vlaznost_tla" translatesAutoresizingMaskIntoConstraints="NO" id="7K1-1T-vgK">
+                                <rect key="frame" x="20" y="92" width="122" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="PP8-rX-odO"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f05-2Q-37d">
+                                <rect key="frame" x="20" y="576" width="374" height="178"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kRz-oU-h4F">
+                                <rect key="frame" x="20" y="222" width="360" height="198"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="198" id="msv-lE-fn9"/>
+                                </constraints>
+                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Ug4-Js-FEs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gca-rK-SuQ" firstAttribute="top" secondItem="Ug4-Js-FEs" secondAttribute="top" constant="40" id="0hV-jI-cHb"/>
+                            <constraint firstItem="Ug4-Js-FEs" firstAttribute="trailing" secondItem="gca-rK-SuQ" secondAttribute="trailing" constant="78" id="3MS-qA-R0c"/>
+                            <constraint firstItem="7K1-1T-vgK" firstAttribute="centerY" secondItem="gca-rK-SuQ" secondAttribute="centerY" id="Aia-GP-LnB"/>
+                            <constraint firstItem="gca-rK-SuQ" firstAttribute="leading" secondItem="7K1-1T-vgK" secondAttribute="trailing" constant="8" id="LzO-lt-BMA"/>
+                            <constraint firstItem="7K1-1T-vgK" firstAttribute="leading" secondItem="Ug4-Js-FEs" secondAttribute="leading" constant="20" id="nmb-sW-oPf"/>
+                            <constraint firstItem="7K1-1T-vgK" firstAttribute="top" secondItem="Ug4-Js-FEs" secondAttribute="top" id="vIy-88-GO1"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tkM-Kg-PUj"/>
+                    <connections>
+                        <outlet property="chartView" destination="f05-2Q-37d" id="BtQ-bu-mVm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f4h-Ap-Tqs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -145,14 +359,76 @@
                     <view key="view" contentMode="scaleToFill" id="Gaj-BL-8PL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Pi-FG-OtS">
+                                <rect key="frame" x="150" y="117" width="197" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="8OR-dX-vue"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="voc" translatesAutoresizingMaskIntoConstraints="NO" id="4Z1-I6-4Rb">
+                                <rect key="frame" x="20" y="92" width="122" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="6gd-up-WwE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hlapljivi organski spojevi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="om8-PY-ZBC">
+                                <rect key="frame" x="150" y="143" width="222" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="jTs-kv-vbq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4QT-lR-bpj">
+                                <rect key="frame" x="20" y="576" width="374" height="178"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Vjk-UB-PK8">
+                                <rect key="frame" x="20" y="222" width="360" height="198"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="198" id="3ID-S7-scP"/>
+                                </constraints>
+                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="kGX-U1-2tR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vjk-UB-PK8" firstAttribute="leading" secondItem="4QT-lR-bpj" secondAttribute="leading" id="0nN-Uf-JOl"/>
+                            <constraint firstItem="4Z1-I6-4Rb" firstAttribute="leading" secondItem="Gaj-BL-8PL" secondAttribute="leadingMargin" id="3zS-Pd-92x"/>
+                            <constraint firstItem="kGX-U1-2tR" firstAttribute="bottom" secondItem="4QT-lR-bpj" secondAttribute="bottom" constant="59" id="5pc-wb-uGJ"/>
+                            <constraint firstItem="4Z1-I6-4Rb" firstAttribute="centerY" secondItem="5Pi-FG-OtS" secondAttribute="centerY" id="97R-Bv-8RF"/>
+                            <constraint firstItem="Vjk-UB-PK8" firstAttribute="leading" secondItem="4Z1-I6-4Rb" secondAttribute="leading" id="9vr-gG-D8w"/>
+                            <constraint firstItem="kGX-U1-2tR" firstAttribute="trailing" secondItem="5Pi-FG-OtS" secondAttribute="trailing" constant="67" id="Ad7-Da-RRN"/>
+                            <constraint firstItem="4Z1-I6-4Rb" firstAttribute="top" secondItem="kGX-U1-2tR" secondAttribute="top" id="KbY-en-mNm"/>
+                            <constraint firstItem="kGX-U1-2tR" firstAttribute="trailing" secondItem="Vjk-UB-PK8" secondAttribute="trailing" constant="34" id="OA1-co-kG4"/>
+                            <constraint firstItem="4QT-lR-bpj" firstAttribute="top" secondItem="Gaj-BL-8PL" secondAttribute="top" constant="576" id="Utw-T5-erN"/>
+                            <constraint firstItem="5Pi-FG-OtS" firstAttribute="leading" secondItem="om8-PY-ZBC" secondAttribute="leading" id="XHp-lo-fhd"/>
+                            <constraint firstItem="5Pi-FG-OtS" firstAttribute="leading" secondItem="4Z1-I6-4Rb" secondAttribute="trailing" constant="8" id="afC-P8-6Ix"/>
+                            <constraint firstItem="4QT-lR-bpj" firstAttribute="trailing" secondItem="Gaj-BL-8PL" secondAttribute="trailingMargin" id="diy-rM-uPR"/>
+                            <constraint firstItem="kGX-U1-2tR" firstAttribute="trailing" secondItem="om8-PY-ZBC" secondAttribute="trailing" constant="42" id="eFv-Vx-7R1"/>
+                            <constraint firstItem="5Pi-FG-OtS" firstAttribute="top" secondItem="kGX-U1-2tR" secondAttribute="top" constant="25" id="kkX-Zg-tXf"/>
+                            <constraint firstItem="Vjk-UB-PK8" firstAttribute="top" secondItem="om8-PY-ZBC" secondAttribute="bottom" constant="37" id="oR1-fd-7vO"/>
+                            <constraint firstItem="om8-PY-ZBC" firstAttribute="top" secondItem="kGX-U1-2tR" secondAttribute="top" constant="51" id="wrA-1O-021"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RMA-vd-QxY"/>
+                    <connections>
+                        <outlet property="chartView" destination="4QT-lR-bpj" id="KsD-Ry-CDp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oDV-zt-eMh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1925" y="1884"/>
+            <point key="canvasLocation" x="-1926.0869565217392" y="1883.7053571428571"/>
         </scene>
         <!--Co View Controller-->
         <scene sceneID="9ZX-s3-1JW">
@@ -161,14 +437,64 @@
                     <view key="view" contentMode="scaleToFill" id="Zfb-Hf-8ti">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ugljični monoksid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhx-Yi-apM">
+                                <rect key="frame" x="150" y="132" width="244" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="dy2-sS-YKC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monoksid" translatesAutoresizingMaskIntoConstraints="NO" id="Wvi-6U-1DT">
+                                <rect key="frame" x="20" y="92" width="122" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="i1h-BH-bSQ"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="odO-Ou-THz">
+                                <rect key="frame" x="20" y="576" width="374" height="178"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7ER-e8-cEH">
+                                <rect key="frame" x="20" y="222" width="360" height="198"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="198" id="bal-u2-IeA"/>
+                                </constraints>
+                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="USu-80-AwB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uhx-Yi-apM" firstAttribute="trailing" secondItem="Zfb-Hf-8ti" secondAttribute="trailingMargin" id="19h-CA-3eH"/>
+                            <constraint firstItem="Wvi-6U-1DT" firstAttribute="top" secondItem="USu-80-AwB" secondAttribute="top" id="APh-Gw-hDq"/>
+                            <constraint firstItem="Wvi-6U-1DT" firstAttribute="centerY" secondItem="uhx-Yi-apM" secondAttribute="centerY" id="EqX-3n-WEP"/>
+                            <constraint firstItem="7ER-e8-cEH" firstAttribute="top" secondItem="Wvi-6U-1DT" secondAttribute="bottom" constant="8" id="MJj-lJ-2nq"/>
+                            <constraint firstItem="Wvi-6U-1DT" firstAttribute="leading" secondItem="Zfb-Hf-8ti" secondAttribute="leadingMargin" id="NWn-42-1TQ"/>
+                            <constraint firstItem="odO-Ou-THz" firstAttribute="trailing" secondItem="uhx-Yi-apM" secondAttribute="trailing" id="Qa4-cd-F8r"/>
+                            <constraint firstItem="odO-Ou-THz" firstAttribute="top" secondItem="Zfb-Hf-8ti" secondAttribute="top" constant="576" id="ZmQ-7t-IaU"/>
+                            <constraint firstItem="7ER-e8-cEH" firstAttribute="leading" secondItem="Wvi-6U-1DT" secondAttribute="leading" id="cCm-4R-Qa7"/>
+                            <constraint firstItem="uhx-Yi-apM" firstAttribute="leading" secondItem="Wvi-6U-1DT" secondAttribute="trailing" constant="8" id="eSV-qT-0Rl"/>
+                            <constraint firstItem="uhx-Yi-apM" firstAttribute="top" secondItem="USu-80-AwB" secondAttribute="top" constant="40" id="eVi-vg-bU2"/>
+                            <constraint firstItem="USu-80-AwB" firstAttribute="bottom" secondItem="odO-Ou-THz" secondAttribute="bottom" constant="59" id="eg5-Lb-1hk"/>
+                            <constraint firstItem="USu-80-AwB" firstAttribute="trailing" secondItem="7ER-e8-cEH" secondAttribute="trailing" constant="34" id="jJh-Xe-Wb0"/>
+                            <constraint firstItem="7ER-e8-cEH" firstAttribute="leading" secondItem="odO-Ou-THz" secondAttribute="leading" id="u6t-8z-gKL"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Osz-Me-Bwb"/>
+                    <connections>
+                        <outlet property="chartView" destination="odO-Ou-THz" id="Kua-AZ-qJk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15m-64-aSe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1925" y="2579"/>
+            <point key="canvasLocation" x="-1926.0869565217392" y="2578.7946428571427"/>
         </scene>
         <!--Ch4 View Controller-->
         <scene sceneID="qVy-uw-LwE">
@@ -177,10 +503,60 @@
                     <view key="view" contentMode="scaleToFill" id="54F-sP-FVp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1e-FD-TEA">
+                                <rect key="frame" x="150" y="132" width="186" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Sl3-to-0pt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="metan" translatesAutoresizingMaskIntoConstraints="NO" id="lgj-FE-20Z">
+                                <rect key="frame" x="20" y="92" width="122" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="Cwf-5j-gDE"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WgZ-Bu-cMX">
+                                <rect key="frame" x="20" y="576" width="374" height="178"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UeN-QX-KYN">
+                                <rect key="frame" x="20" y="222" width="360" height="198"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="198" id="5wU-Ou-pfm"/>
+                                </constraints>
+                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Ipd-ST-7a4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UeN-QX-KYN" firstAttribute="leading" secondItem="lgj-FE-20Z" secondAttribute="leading" id="2Uo-mb-YUj"/>
+                            <constraint firstItem="UeN-QX-KYN" firstAttribute="top" secondItem="lgj-FE-20Z" secondAttribute="bottom" constant="8" id="Kgw-c3-n1T"/>
+                            <constraint firstItem="WgZ-Bu-cMX" firstAttribute="trailing" secondItem="54F-sP-FVp" secondAttribute="trailingMargin" id="MiW-QV-yFH"/>
+                            <constraint firstItem="Ipd-ST-7a4" firstAttribute="bottom" secondItem="WgZ-Bu-cMX" secondAttribute="bottom" constant="59" id="MwR-hX-Fm1"/>
+                            <constraint firstItem="y1e-FD-TEA" firstAttribute="top" secondItem="Ipd-ST-7a4" secondAttribute="top" constant="40" id="OiG-Jz-0CJ"/>
+                            <constraint firstItem="y1e-FD-TEA" firstAttribute="leading" secondItem="lgj-FE-20Z" secondAttribute="trailing" constant="8" id="VpD-mu-HBF"/>
+                            <constraint firstItem="lgj-FE-20Z" firstAttribute="leading" secondItem="54F-sP-FVp" secondAttribute="leadingMargin" id="aW2-cH-pxJ"/>
+                            <constraint firstItem="Ipd-ST-7a4" firstAttribute="trailing" secondItem="UeN-QX-KYN" secondAttribute="trailing" constant="34" id="fy4-aw-M4M"/>
+                            <constraint firstItem="lgj-FE-20Z" firstAttribute="centerY" secondItem="y1e-FD-TEA" secondAttribute="centerY" id="jE5-vk-KHL"/>
+                            <constraint firstItem="lgj-FE-20Z" firstAttribute="top" secondItem="Ipd-ST-7a4" secondAttribute="top" id="m3v-nz-GWG"/>
+                            <constraint firstItem="Ipd-ST-7a4" firstAttribute="trailing" secondItem="y1e-FD-TEA" secondAttribute="trailing" constant="78" id="mIp-YW-9eI"/>
+                            <constraint firstItem="UeN-QX-KYN" firstAttribute="leading" secondItem="WgZ-Bu-cMX" secondAttribute="leading" id="so0-Ce-ahR"/>
+                            <constraint firstItem="WgZ-Bu-cMX" firstAttribute="top" secondItem="54F-sP-FVp" secondAttribute="top" constant="576" id="xZS-Bb-2VQ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="w25-3t-WJO"/>
+                    <connections>
+                        <outlet property="chartView" destination="WgZ-Bu-cMX" id="QDy-vz-5MU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O2l-wi-X6E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -193,10 +569,72 @@
                     <view key="view" contentMode="scaleToFill" id="Wap-pm-ECs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LPG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTI-pO-bfx">
+                                <rect key="frame" x="150" y="117" width="197" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Azs-Qy-tY4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lpg" translatesAutoresizingMaskIntoConstraints="NO" id="350-bf-CXa">
+                                <rect key="frame" x="20" y="92" width="122" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="bbe-xf-WmJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ukapljeni naftni plin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiQ-VU-abA">
+                                <rect key="frame" x="150" y="143" width="222" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="MTT-5C-wCn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="goU-Fl-MCX">
+                                <rect key="frame" x="20" y="576" width="374" height="178"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Azs-n6-bnI">
+                                <rect key="frame" x="20" y="222" width="360" height="198"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="198" id="Vbs-VF-v4H"/>
+                                </constraints>
+                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ynf-xP-Mug"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HTI-pO-bfx" firstAttribute="leading" secondItem="OiQ-VU-abA" secondAttribute="leading" id="1fA-gC-V1Z"/>
+                            <constraint firstItem="Azs-n6-bnI" firstAttribute="top" secondItem="OiQ-VU-abA" secondAttribute="bottom" constant="37" id="9Bg-XS-mrn"/>
+                            <constraint firstItem="350-bf-CXa" firstAttribute="centerY" secondItem="HTI-pO-bfx" secondAttribute="centerY" id="Adm-Yx-r3L"/>
+                            <constraint firstItem="350-bf-CXa" firstAttribute="top" secondItem="ynf-xP-Mug" secondAttribute="top" id="Drl-U4-0EG"/>
+                            <constraint firstItem="goU-Fl-MCX" firstAttribute="trailing" secondItem="Wap-pm-ECs" secondAttribute="trailingMargin" id="IpU-sc-5Bv"/>
+                            <constraint firstItem="ynf-xP-Mug" firstAttribute="trailing" secondItem="HTI-pO-bfx" secondAttribute="trailing" constant="67" id="IqA-Kb-bx3"/>
+                            <constraint firstItem="Azs-n6-bnI" firstAttribute="leading" secondItem="goU-Fl-MCX" secondAttribute="leading" id="JcM-Ap-VkG"/>
+                            <constraint firstItem="HTI-pO-bfx" firstAttribute="leading" secondItem="350-bf-CXa" secondAttribute="trailing" constant="8" id="Okz-mN-sQg"/>
+                            <constraint firstItem="HTI-pO-bfx" firstAttribute="top" secondItem="ynf-xP-Mug" secondAttribute="top" constant="25" id="QZ1-XU-sPA"/>
+                            <constraint firstItem="ynf-xP-Mug" firstAttribute="bottom" secondItem="goU-Fl-MCX" secondAttribute="bottom" constant="59" id="Xm7-RI-sfc"/>
+                            <constraint firstItem="OiQ-VU-abA" firstAttribute="top" secondItem="ynf-xP-Mug" secondAttribute="top" constant="51" id="ZeN-On-ML2"/>
+                            <constraint firstItem="Azs-n6-bnI" firstAttribute="leading" secondItem="350-bf-CXa" secondAttribute="leading" id="ZgF-Wp-jgK"/>
+                            <constraint firstItem="ynf-xP-Mug" firstAttribute="trailing" secondItem="OiQ-VU-abA" secondAttribute="trailing" constant="42" id="ez8-dp-Wog"/>
+                            <constraint firstItem="goU-Fl-MCX" firstAttribute="top" secondItem="Wap-pm-ECs" secondAttribute="top" constant="576" id="hGz-kX-KKh"/>
+                            <constraint firstItem="ynf-xP-Mug" firstAttribute="trailing" secondItem="Azs-n6-bnI" secondAttribute="trailing" constant="34" id="jTZ-SM-PUo"/>
+                            <constraint firstItem="350-bf-CXa" firstAttribute="leading" secondItem="Wap-pm-ECs" secondAttribute="leadingMargin" id="vrm-80-cuP"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1xy-h5-MEs"/>
+                    <connections>
+                        <outlet property="chartView" destination="goU-Fl-MCX" id="UbI-f2-Foe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vj4-0a-gmM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -209,10 +647,60 @@
                     <view key="view" contentMode="scaleToFill" id="1r3-xI-khZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amonijak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmR-sN-mBh">
+                                <rect key="frame" x="150" y="132" width="186" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="qtL-ug-HEN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nh3" translatesAutoresizingMaskIntoConstraints="NO" id="QKu-lw-cS6">
+                                <rect key="frame" x="20" y="92" width="122" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="bnp-FP-EcD"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5J4-1D-bnM">
+                                <rect key="frame" x="20" y="576" width="374" height="178"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="se0-mO-QOn">
+                                <rect key="frame" x="20" y="222" width="360" height="198"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="198" id="bJS-z4-TMK"/>
+                                </constraints>
+                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="i8g-IT-n73"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wmR-sN-mBh" firstAttribute="top" secondItem="i8g-IT-n73" secondAttribute="top" constant="40" id="2fc-LH-qFF"/>
+                            <constraint firstItem="i8g-IT-n73" firstAttribute="trailing" secondItem="wmR-sN-mBh" secondAttribute="trailing" constant="78" id="4Ec-hN-SvG"/>
+                            <constraint firstItem="QKu-lw-cS6" firstAttribute="leading" secondItem="1r3-xI-khZ" secondAttribute="leadingMargin" id="CrC-TR-IL8"/>
+                            <constraint firstItem="se0-mO-QOn" firstAttribute="leading" secondItem="QKu-lw-cS6" secondAttribute="leading" id="U6K-Mz-xRU"/>
+                            <constraint firstItem="QKu-lw-cS6" firstAttribute="centerY" secondItem="wmR-sN-mBh" secondAttribute="centerY" id="Wn9-dZ-nlo"/>
+                            <constraint firstItem="5J4-1D-bnM" firstAttribute="trailing" secondItem="1r3-xI-khZ" secondAttribute="trailingMargin" id="aSG-NS-wWx"/>
+                            <constraint firstItem="wmR-sN-mBh" firstAttribute="leading" secondItem="QKu-lw-cS6" secondAttribute="trailing" constant="8" id="aTY-2X-oVp"/>
+                            <constraint firstItem="se0-mO-QOn" firstAttribute="top" secondItem="QKu-lw-cS6" secondAttribute="bottom" constant="8" id="d7E-TN-moc"/>
+                            <constraint firstItem="se0-mO-QOn" firstAttribute="leading" secondItem="5J4-1D-bnM" secondAttribute="leading" id="dsf-ty-ItG"/>
+                            <constraint firstItem="QKu-lw-cS6" firstAttribute="top" secondItem="i8g-IT-n73" secondAttribute="top" id="n1c-aP-QAq"/>
+                            <constraint firstItem="i8g-IT-n73" firstAttribute="bottom" secondItem="5J4-1D-bnM" secondAttribute="bottom" constant="59" id="r4X-xi-AC2"/>
+                            <constraint firstItem="5J4-1D-bnM" firstAttribute="top" secondItem="1r3-xI-khZ" secondAttribute="top" constant="576" id="rCu-iR-cyo"/>
+                            <constraint firstItem="i8g-IT-n73" firstAttribute="trailing" secondItem="se0-mO-QOn" secondAttribute="trailing" constant="34" id="uuN-pZ-3jA"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3hH-qr-UdT"/>
+                    <connections>
+                        <outlet property="chartView" destination="5J4-1D-bnM" id="502-Hs-kC4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pA5-aE-vi5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -225,14 +713,64 @@
                     <view key="view" contentMode="scaleToFill" id="XAC-Ur-Tq3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ugljični dioksid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZx-7F-dvl">
+                                <rect key="frame" x="150" y="132" width="232" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Y7M-nB-3xy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dioksid" translatesAutoresizingMaskIntoConstraints="NO" id="ckM-kT-Whx">
+                                <rect key="frame" x="20" y="92" width="122" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="cGM-vC-jiA"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="luB-eS-pQB">
+                                <rect key="frame" x="20" y="570" width="374" height="178"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B8b-fE-QO2">
+                                <rect key="frame" x="20" y="222" width="360" height="198"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="198" id="FBL-jk-bCn"/>
+                                </constraints>
+                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="LKE-wq-P3u"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ckM-kT-Whx" firstAttribute="top" secondItem="LKE-wq-P3u" secondAttribute="top" id="69p-ao-7mG"/>
+                            <constraint firstItem="luB-eS-pQB" firstAttribute="trailing" secondItem="XAC-Ur-Tq3" secondAttribute="trailingMargin" id="DBJ-xR-KU7"/>
+                            <constraint firstItem="B8b-fE-QO2" firstAttribute="leading" secondItem="ckM-kT-Whx" secondAttribute="leading" id="DDr-nO-ab2"/>
+                            <constraint firstItem="VZx-7F-dvl" firstAttribute="leading" secondItem="ckM-kT-Whx" secondAttribute="trailing" constant="8" id="Eh2-nO-h19"/>
+                            <constraint firstItem="B8b-fE-QO2" firstAttribute="top" secondItem="ckM-kT-Whx" secondAttribute="bottom" constant="8" id="Qm1-Rj-W62"/>
+                            <constraint firstItem="VZx-7F-dvl" firstAttribute="top" secondItem="LKE-wq-P3u" secondAttribute="top" constant="40" id="VaJ-Nl-FJe"/>
+                            <constraint firstItem="LKE-wq-P3u" firstAttribute="trailing" secondItem="VZx-7F-dvl" secondAttribute="trailing" constant="32" id="dcs-qn-ZQz"/>
+                            <constraint firstItem="ckM-kT-Whx" firstAttribute="leading" secondItem="XAC-Ur-Tq3" secondAttribute="leadingMargin" id="frL-Vf-16A"/>
+                            <constraint firstItem="ckM-kT-Whx" firstAttribute="centerY" secondItem="VZx-7F-dvl" secondAttribute="centerY" id="gzn-IC-D6L"/>
+                            <constraint firstItem="LKE-wq-P3u" firstAttribute="bottom" secondItem="luB-eS-pQB" secondAttribute="bottom" constant="65" id="oUS-eN-h8s"/>
+                            <constraint firstItem="B8b-fE-QO2" firstAttribute="leading" secondItem="luB-eS-pQB" secondAttribute="leading" id="sGw-j9-2pE"/>
+                            <constraint firstItem="LKE-wq-P3u" firstAttribute="trailing" secondItem="B8b-fE-QO2" secondAttribute="trailing" constant="34" id="wlk-Ow-cen"/>
+                            <constraint firstItem="luB-eS-pQB" firstAttribute="top" secondItem="XAC-Ur-Tq3" secondAttribute="top" constant="570" id="z2R-X9-D5d"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UHO-6Z-qeC"/>
+                    <connections>
+                        <outlet property="chartView" destination="luB-eS-pQB" id="YWt-s1-Kxt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X26-pk-vnc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1138" y="2579"/>
+            <point key="canvasLocation" x="1137.68115942029" y="2578.7946428571427"/>
         </scene>
         <!--Sumpor View Controller-->
         <scene sceneID="j48-2N-UeJ">
@@ -241,10 +779,60 @@
                     <view key="view" contentMode="scaleToFill" id="Js4-LI-2g1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sumpor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syr-9C-XWK">
+                                <rect key="frame" x="150" y="132" width="186" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="vZx-vP-ucP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sumpor" translatesAutoresizingMaskIntoConstraints="NO" id="Xzx-8b-j8M">
+                                <rect key="frame" x="20" y="92" width="122" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="h4q-Ju-SLK"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nrl-ac-kue">
+                                <rect key="frame" x="20" y="576" width="374" height="178"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZOF-TY-Boh">
+                                <rect key="frame" x="20" y="222" width="360" height="198"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="198" id="t5b-AS-Bnz"/>
+                                </constraints>
+                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Hd7-D8-881"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Syr-9C-XWK" firstAttribute="top" secondItem="Hd7-D8-881" secondAttribute="top" constant="40" id="6Gp-Hx-rD7"/>
+                            <constraint firstItem="Hd7-D8-881" firstAttribute="trailing" secondItem="ZOF-TY-Boh" secondAttribute="trailing" constant="34" id="DdV-V7-Qxy"/>
+                            <constraint firstItem="Xzx-8b-j8M" firstAttribute="leading" secondItem="Js4-LI-2g1" secondAttribute="leadingMargin" id="Qmu-tV-MsE"/>
+                            <constraint firstItem="ZOF-TY-Boh" firstAttribute="leading" secondItem="nrl-ac-kue" secondAttribute="leading" id="Tzb-23-2ia"/>
+                            <constraint firstItem="ZOF-TY-Boh" firstAttribute="top" secondItem="Xzx-8b-j8M" secondAttribute="bottom" constant="8" id="iKL-nG-Cb4"/>
+                            <constraint firstItem="nrl-ac-kue" firstAttribute="trailing" secondItem="Js4-LI-2g1" secondAttribute="trailingMargin" id="iN4-H0-7p5"/>
+                            <constraint firstItem="Syr-9C-XWK" firstAttribute="leading" secondItem="Xzx-8b-j8M" secondAttribute="trailing" constant="8" id="jyg-0s-SSj"/>
+                            <constraint firstItem="Xzx-8b-j8M" firstAttribute="centerY" secondItem="Syr-9C-XWK" secondAttribute="centerY" id="lCG-7s-lrQ"/>
+                            <constraint firstItem="ZOF-TY-Boh" firstAttribute="leading" secondItem="Xzx-8b-j8M" secondAttribute="leading" id="mng-Wn-TMP"/>
+                            <constraint firstItem="Hd7-D8-881" firstAttribute="trailing" secondItem="Syr-9C-XWK" secondAttribute="trailing" constant="78" id="sRW-I7-t2F"/>
+                            <constraint firstItem="nrl-ac-kue" firstAttribute="top" secondItem="Js4-LI-2g1" secondAttribute="top" constant="576" id="sfa-64-kri"/>
+                            <constraint firstItem="Hd7-D8-881" firstAttribute="bottom" secondItem="nrl-ac-kue" secondAttribute="bottom" constant="59" id="vbn-SU-Phz"/>
+                            <constraint firstItem="Xzx-8b-j8M" firstAttribute="top" secondItem="Hd7-D8-881" secondAttribute="top" id="yz0-KQ-oWx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fOH-vl-YWB"/>
+                    <connections>
+                        <outlet property="chartView" destination="nrl-ac-kue" id="H6P-FC-xwR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R4V-lJ-pos" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -257,14 +845,64 @@
                     <view key="view" contentMode="scaleToFill" id="8US-Ii-SIQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tlak zraka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ef-J6-UqN">
+                                <rect key="frame" x="150" y="132" width="186" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="PDG-FH-Sbb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tlak" translatesAutoresizingMaskIntoConstraints="NO" id="zOx-iE-lak">
+                                <rect key="frame" x="20" y="92" width="122" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="1qe-V7-st4"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t0p-ET-h2M">
+                                <rect key="frame" x="20" y="576" width="374" height="178"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Kx-io-Wd3">
+                                <rect key="frame" x="20" y="222" width="360" height="198"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="198" id="ka5-m0-LWE"/>
+                                </constraints>
+                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="FwS-jN-OaF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FwS-jN-OaF" firstAttribute="trailing" secondItem="2Kx-io-Wd3" secondAttribute="trailing" constant="34" id="0Yi-XS-FoC"/>
+                            <constraint firstItem="zOx-iE-lak" firstAttribute="top" secondItem="FwS-jN-OaF" secondAttribute="top" id="1HA-YO-rPX"/>
+                            <constraint firstItem="6ef-J6-UqN" firstAttribute="top" secondItem="FwS-jN-OaF" secondAttribute="top" constant="40" id="OGB-O5-CXw"/>
+                            <constraint firstItem="zOx-iE-lak" firstAttribute="leading" secondItem="8US-Ii-SIQ" secondAttribute="leadingMargin" id="OrS-vR-nhS"/>
+                            <constraint firstItem="t0p-ET-h2M" firstAttribute="trailing" secondItem="8US-Ii-SIQ" secondAttribute="trailingMargin" id="YPD-ll-hlS"/>
+                            <constraint firstItem="FwS-jN-OaF" firstAttribute="trailing" secondItem="6ef-J6-UqN" secondAttribute="trailing" constant="78" id="bZK-Fs-3VR"/>
+                            <constraint firstItem="2Kx-io-Wd3" firstAttribute="leading" secondItem="t0p-ET-h2M" secondAttribute="leading" id="d60-Ob-dsU"/>
+                            <constraint firstItem="6ef-J6-UqN" firstAttribute="leading" secondItem="zOx-iE-lak" secondAttribute="trailing" constant="8" id="evU-jX-Fw4"/>
+                            <constraint firstItem="zOx-iE-lak" firstAttribute="centerY" secondItem="6ef-J6-UqN" secondAttribute="centerY" id="h4C-4v-D52"/>
+                            <constraint firstItem="2Kx-io-Wd3" firstAttribute="leading" secondItem="zOx-iE-lak" secondAttribute="leading" id="iTz-1g-cE4"/>
+                            <constraint firstItem="t0p-ET-h2M" firstAttribute="top" secondItem="8US-Ii-SIQ" secondAttribute="top" constant="576" id="lgq-tU-2Xb"/>
+                            <constraint firstItem="FwS-jN-OaF" firstAttribute="bottom" secondItem="t0p-ET-h2M" secondAttribute="bottom" constant="59" id="tn3-cY-jGS"/>
+                            <constraint firstItem="2Kx-io-Wd3" firstAttribute="top" secondItem="zOx-iE-lak" secondAttribute="bottom" constant="8" id="wpc-W6-V3z"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Axr-ts-Yz2"/>
+                    <connections>
+                        <outlet property="chartView" destination="t0p-ET-h2M" id="oru-Bg-Wnt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bwd-mg-Fah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-371" y="1892"/>
+            <point key="canvasLocation" x="-371.01449275362324" y="1891.7410714285713"/>
         </scene>
         <!--Benzen View Controller-->
         <scene sceneID="gNm-P3-qpQ">
@@ -273,10 +911,60 @@
                     <view key="view" contentMode="scaleToFill" id="dPc-Fy-Ihb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Benzen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ND4-si-4Tn">
+                                <rect key="frame" x="150" y="132" width="186" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="2j7-RR-ZaU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="benzen" translatesAutoresizingMaskIntoConstraints="NO" id="AAV-iA-ltM">
+                                <rect key="frame" x="20" y="92" width="122" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="WLR-eZ-jMb"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aE4-Je-AaE">
+                                <rect key="frame" x="20" y="576" width="374" height="178"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0ij-d8-zw2">
+                                <rect key="frame" x="20" y="222" width="360" height="198"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="198" id="1lh-Wx-hhf"/>
+                                </constraints>
+                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="uXe-y5-Twv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AAV-iA-ltM" firstAttribute="centerY" secondItem="ND4-si-4Tn" secondAttribute="centerY" id="0W4-q6-bDF"/>
+                            <constraint firstItem="0ij-d8-zw2" firstAttribute="leading" secondItem="aE4-Je-AaE" secondAttribute="leading" id="1H2-H2-8o9"/>
+                            <constraint firstItem="ND4-si-4Tn" firstAttribute="top" secondItem="uXe-y5-Twv" secondAttribute="top" constant="40" id="5vJ-fr-Jth"/>
+                            <constraint firstItem="AAV-iA-ltM" firstAttribute="top" secondItem="uXe-y5-Twv" secondAttribute="top" id="7WI-CK-OBR"/>
+                            <constraint firstItem="0ij-d8-zw2" firstAttribute="top" secondItem="AAV-iA-ltM" secondAttribute="bottom" constant="8" id="7sX-uY-xI9"/>
+                            <constraint firstItem="AAV-iA-ltM" firstAttribute="leading" secondItem="dPc-Fy-Ihb" secondAttribute="leadingMargin" id="Cm5-IU-Bpj"/>
+                            <constraint firstItem="0ij-d8-zw2" firstAttribute="leading" secondItem="AAV-iA-ltM" secondAttribute="leading" id="IwE-eP-hU4"/>
+                            <constraint firstItem="ND4-si-4Tn" firstAttribute="leading" secondItem="AAV-iA-ltM" secondAttribute="trailing" constant="8" id="PiO-dP-BBQ"/>
+                            <constraint firstItem="uXe-y5-Twv" firstAttribute="trailing" secondItem="0ij-d8-zw2" secondAttribute="trailing" constant="34" id="ZpL-cn-CWU"/>
+                            <constraint firstItem="uXe-y5-Twv" firstAttribute="trailing" secondItem="ND4-si-4Tn" secondAttribute="trailing" constant="78" id="c6t-81-REt"/>
+                            <constraint firstItem="aE4-Je-AaE" firstAttribute="trailing" secondItem="dPc-Fy-Ihb" secondAttribute="trailingMargin" id="foB-rV-9Ot"/>
+                            <constraint firstItem="uXe-y5-Twv" firstAttribute="bottom" secondItem="aE4-Je-AaE" secondAttribute="bottom" constant="59" id="vvA-4e-0jE"/>
+                            <constraint firstItem="aE4-Je-AaE" firstAttribute="top" secondItem="dPc-Fy-Ihb" secondAttribute="top" constant="576" id="xQY-VM-lwf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FzD-dC-vhD"/>
+                    <connections>
+                        <outlet property="chartView" destination="aE4-Je-AaE" id="0p6-gu-lAO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3GW-3b-eN8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -289,14 +977,58 @@
                     <view key="view" contentMode="scaleToFill" id="oOe-ud-fgb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PM2.5 čestice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTG-Wf-62s">
+                                <rect key="frame" x="150" y="132" width="195" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="HGE-QS-kBr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pm2.5" translatesAutoresizingMaskIntoConstraints="NO" id="avG-wy-Vcs">
+                                <rect key="frame" x="20" y="92" width="122" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="xqw-5P-CBG"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aWh-4v-I3J">
+                                <rect key="frame" x="20" y="591" width="374" height="178"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bg4-oO-GWC">
+                                <rect key="frame" x="20" y="222" width="360" height="198"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="198" id="O0g-QD-MQA"/>
+                                </constraints>
+                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rAI-rC-6Au"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="avG-wy-Vcs" firstAttribute="centerY" secondItem="bTG-Wf-62s" secondAttribute="centerY" id="Nx4-Dp-I4A"/>
+                            <constraint firstItem="rAI-rC-6Au" firstAttribute="trailing" secondItem="bTG-Wf-62s" secondAttribute="trailing" constant="69" id="WuM-iQ-1aw"/>
+                            <constraint firstItem="bTG-Wf-62s" firstAttribute="leading" secondItem="avG-wy-Vcs" secondAttribute="trailing" constant="8" id="btH-LV-xCc"/>
+                            <constraint firstItem="avG-wy-Vcs" firstAttribute="leading" secondItem="oOe-ud-fgb" secondAttribute="leadingMargin" id="e6Y-lD-dEJ"/>
+                            <constraint firstItem="bTG-Wf-62s" firstAttribute="top" secondItem="rAI-rC-6Au" secondAttribute="top" constant="40" id="nGx-3S-5u8"/>
+                            <constraint firstItem="avG-wy-Vcs" firstAttribute="top" secondItem="rAI-rC-6Au" secondAttribute="top" id="sLW-EJ-ZPO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nHw-eY-20s"/>
+                    <connections>
+                        <outlet property="chartView" destination="aWh-4v-I3J" id="Cdb-hx-NcU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQ5-HZ-WXX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1139" y="1892"/>
+            <point key="canvasLocation" x="1137.68115942029" y="1891.7410714285713"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="0Pw-H1-0qm">
@@ -305,10 +1037,60 @@
                     <view key="view" contentMode="scaleToFill" id="S7B-rq-qhM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ozon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OkV-Bl-Pia">
+                                <rect key="frame" x="150" y="132" width="186" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="HkR-Fk-Pcw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ozone" translatesAutoresizingMaskIntoConstraints="NO" id="uip-fW-Pw0">
+                                <rect key="frame" x="20" y="92" width="122" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="iM2-G6-YaS"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWb-TA-RF0">
+                                <rect key="frame" x="20" y="550" width="374" height="178"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TIC-PX-HIS">
+                                <rect key="frame" x="20" y="222" width="360" height="198"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="198" id="7fy-n4-7JT"/>
+                                </constraints>
+                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Jaw-uQ-f5M"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uip-fW-Pw0" firstAttribute="leading" secondItem="S7B-rq-qhM" secondAttribute="leadingMargin" id="FUH-j4-g6z"/>
+                            <constraint firstItem="hWb-TA-RF0" firstAttribute="top" secondItem="S7B-rq-qhM" secondAttribute="top" constant="550" id="Oh9-TB-iyi"/>
+                            <constraint firstItem="Jaw-uQ-f5M" firstAttribute="bottom" secondItem="hWb-TA-RF0" secondAttribute="bottom" constant="85" id="Uj9-QJ-jDP"/>
+                            <constraint firstItem="TIC-PX-HIS" firstAttribute="leading" secondItem="uip-fW-Pw0" secondAttribute="leading" id="W8E-2y-daB"/>
+                            <constraint firstItem="hWb-TA-RF0" firstAttribute="trailing" secondItem="S7B-rq-qhM" secondAttribute="trailingMargin" id="brH-s4-bch"/>
+                            <constraint firstItem="uip-fW-Pw0" firstAttribute="centerY" secondItem="OkV-Bl-Pia" secondAttribute="centerY" id="cp4-Ze-mIU"/>
+                            <constraint firstItem="TIC-PX-HIS" firstAttribute="leading" secondItem="hWb-TA-RF0" secondAttribute="leading" id="eC4-q5-3DB"/>
+                            <constraint firstItem="Jaw-uQ-f5M" firstAttribute="trailing" secondItem="OkV-Bl-Pia" secondAttribute="trailing" constant="78" id="fJn-Xi-DqM"/>
+                            <constraint firstItem="OkV-Bl-Pia" firstAttribute="top" secondItem="Jaw-uQ-f5M" secondAttribute="top" constant="40" id="jh8-wL-yzq"/>
+                            <constraint firstItem="OkV-Bl-Pia" firstAttribute="leading" secondItem="uip-fW-Pw0" secondAttribute="trailing" constant="8" id="k5w-to-zxW"/>
+                            <constraint firstItem="Jaw-uQ-f5M" firstAttribute="trailing" secondItem="TIC-PX-HIS" secondAttribute="trailing" constant="34" id="kYg-3s-ZW1"/>
+                            <constraint firstItem="TIC-PX-HIS" firstAttribute="top" secondItem="uip-fW-Pw0" secondAttribute="bottom" constant="8" id="tvF-eM-dcq"/>
+                            <constraint firstItem="uip-fW-Pw0" firstAttribute="top" secondItem="Jaw-uQ-f5M" secondAttribute="top" id="yHa-vW-bMh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lue-Ub-uQg"/>
+                    <connections>
+                        <outlet property="chartView" destination="hWb-TA-RF0" id="cLE-WH-gM5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="onI-9C-Pos" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -560,7 +1342,7 @@
                         <segue destination="OBo-xu-vW8" kind="show" identifier="pm25_view" id="oKD-n9-4Z7"/>
                         <segue destination="XeS-UX-a0b" kind="show" identifier="co_view" id="tri-hu-tQA"/>
                         <segue destination="GTK-k6-fx3" kind="show" identifier="ch4_view" id="p15-Z2-POl"/>
-                        <segue destination="HMx-dt-Tin" kind="show" identifier="lpg_View" id="ZI6-Ie-Lm1"/>
+                        <segue destination="HMx-dt-Tin" kind="show" identifier="lpg_view" id="ZI6-Ie-Lm1"/>
                         <segue destination="HFH-a8-xzB" kind="show" identifier="nh3_view" id="qkf-sr-RPD"/>
                         <segue destination="SW5-t1-OZR" kind="show" identifier="co2_view" id="QA0-2N-rvt"/>
                         <segue destination="pKK-4E-3h1" kind="show" identifier="hoc_view" id="Lp6-UM-Koc"/>
@@ -626,10 +1408,25 @@
     </scenes>
     <resources>
         <image name="antenna.radiowaves.left.and.right" catalog="system" width="128" height="111"/>
+        <image name="benzen" width="512" height="512"/>
+        <image name="dioksid" width="512" height="512"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="info.square" catalog="system" width="128" height="114"/>
+        <image name="lpg" width="512" height="512"/>
+        <image name="metan" width="512" height="512"/>
+        <image name="monoksid" width="512" height="512"/>
+        <image name="nh3" width="512" height="512"/>
+        <image name="ozone" width="512" height="512"/>
+        <image name="pm2.5" width="512" height="512"/>
         <image name="rectangle.inset.filled.and.person.filled" catalog="system" width="128" height="87"/>
-        <image name="termometar_BIG" width="512" height="512"/>
+        <image name="smoke" width="512" height="512"/>
+        <image name="sumpor" width="512" height="512"/>
+        <image name="svijetlo" width="512" height="512"/>
+        <image name="termometar" width="512" height="512"/>
+        <image name="tlak" width="512" height="512"/>
+        <image name="vlaga" width="512" height="512"/>
+        <image name="vlaznost_tla" width="512" height="512"/>
+        <image name="voc" width="512" height="512"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
