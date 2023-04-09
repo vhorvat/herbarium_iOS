@@ -11,7 +11,7 @@ import TinyConstraints
 
 
 class temperatura_ViewController: UIViewController, ChartViewDelegate {
-
+    
     @IBOutlet weak var temepraturaBIGicon: UIImageView!
     
     @IBOutlet weak var chartView: UIView!
@@ -62,6 +62,15 @@ class temperatura_ViewController: UIViewController, ChartViewDelegate {
     }
     
     func setData(){
+        var yValues: [ChartDataEntry] = []
+        
+        for i in (0...29){
+            yValues.append(ChartDataEntry(x: Double(i), y: Shared.instance.AllData[i].temperature))
+        }
+        
+        print(yValues)
+        
+        
         let set1 = LineChartDataSet(entries: yValues)
         set1.drawCirclesEnabled = false
         set1.mode = .cubicBezier
@@ -71,47 +80,21 @@ class temperatura_ViewController: UIViewController, ChartViewDelegate {
         
         let data = LineChartData(dataSet: set1)
         lineChartView.data = data
-    }
-    
-    let yValues: [ChartDataEntry] = [
-        ChartDataEntry(x: 1.0, y: 23.1),
-        ChartDataEntry(x: 2.0, y: 24.1),
-        ChartDataEntry(x: 3.0, y: 25.1),
-        ChartDataEntry(x: 4.0, y: 26.1),
-        ChartDataEntry(x: 5.0, y: 25.1),
-        ChartDataEntry(x: 6.0, y: 24.1),
-        ChartDataEntry(x: 7.0, y: 23.5),
-        ChartDataEntry(x: 8.0, y: 23.1),
-        ChartDataEntry(x: 9.0, y: 22.8),
-        ChartDataEntry(x: 10.0, y: 23.3),
-        ChartDataEntry(x: 11.0, y: 26.1),
-        ChartDataEntry(x: 12.0, y: 25.1),
-        ChartDataEntry(x: 13.0, y: 24.1),
-        ChartDataEntry(x: 14.0, y: 23.1),
-        ChartDataEntry(x: 15.0, y: 24.1),
-        ChartDataEntry(x: 16.0, y: 25.1),
-        ChartDataEntry(x: 17.0, y: 26.1),
-        ChartDataEntry(x: 18.0, y: 25.1),
-        ChartDataEntry(x: 19.0, y: 24.1),
-        ChartDataEntry(x: 20.0, y: 22.1),
-        ChartDataEntry(x: 21.0, y: 23.1),
-        ChartDataEntry(x: 22.0, y: 24.1),
-        ChartDataEntry(x: 23.0, y: 25.1),
-        ChartDataEntry(x: 24.0, y: 26.1),
-        ChartDataEntry(x: 25.0, y: 25.1),
-        ChartDataEntry(x: 26.0, y: 24.1),
         
-    ]
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
-
+    
+    
+    
+    
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

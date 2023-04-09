@@ -8,7 +8,7 @@
 import UIKit
 
 extension Date {
-   func getFormattedDate(format: String) -> String {
+    func getFormattedDate(format: String) -> String {
         let dateformat = DateFormatter()
         dateformat.dateFormat = format
         return dateformat.string(from: self)
@@ -72,7 +72,7 @@ class AllDataViewController: UIViewController, UITableViewDataSource, UITableVie
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
-
+    
     
     
     @IBOutlet weak var current_time: UILabel!
@@ -85,22 +85,22 @@ class AllDataViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     let data: [Measurment] = [
-    Measurment(title: "Temperatura", imageName: "termometar"),
-    Measurment(title: "Vlaga zraka", imageName: "vlaga"),
-    Measurment(title: "Dim", imageName: "smoke"),
-    Measurment(title: "Osvijetljenje", imageName: "svijetlo"),
-    Measurment(title: "Vlažnost tla", imageName: "vlaznost_tla"),
-    Measurment(title: "Hlapljivi organski spojevi", imageName: "voc"),
-    Measurment(title: "Sumpor", imageName: "sumpor"),
-    Measurment(title: "Tlak zraka", imageName: "tlak"),
-    Measurment(title: "Benzen", imageName: "benzen"),
-    Measurment(title: "PM2.5", imageName: "pm2.5"),
-    Measurment(title: "Ugljični monoksid (CO)", imageName: "monoksid"),
-    Measurment(title: "Metan (CH4)", imageName: "metan"),
-    Measurment(title: "LPG", imageName: "lpg"),
-    Measurment(title: "NH3", imageName: "nh3"),
-    Measurment(title: "Ugljikov dioksid (CO2)", imageName: "dioksid"),
-    Measurment(title: "Ozon (O3)", imageName: "ozone"),
+        Measurment(title: "Temperatura", imageName: "termometar"),
+        Measurment(title: "Vlaga zraka", imageName: "vlaga"),
+        Measurment(title: "Dim", imageName: "smoke"),
+        Measurment(title: "Osvijetljenje", imageName: "svijetlo"),
+        Measurment(title: "Vlažnost tla", imageName: "vlaznost_tla"),
+        Measurment(title: "Hlapljivi organski spojevi", imageName: "voc"),
+        Measurment(title: "Sumpor", imageName: "sumpor"),
+        Measurment(title: "Tlak zraka", imageName: "tlak"),
+        Measurment(title: "Benzen", imageName: "benzen"),
+        Measurment(title: "PM2.5", imageName: "pm2.5"),
+        Measurment(title: "Ugljični monoksid (CO)", imageName: "monoksid"),
+        Measurment(title: "Metan (CH4)", imageName: "metan"),
+        Measurment(title: "LPG", imageName: "lpg"),
+        Measurment(title: "NH3", imageName: "nh3"),
+        Measurment(title: "Ugljikov dioksid (CO2)", imageName: "dioksid"),
+        Measurment(title: "Ozon (O3)", imageName: "ozone"),
     ]
     
     override func viewDidLoad() {
@@ -117,7 +117,7 @@ class AllDataViewController: UIViewController, UITableViewDataSource, UITableVie
         
         let formatDate = date.getFormattedDate(format: "EEEE, MMM d, yyyy.")
         current_date.text = formatDate
-
+        
         
         if ((Shared.instance.peripheral?.name) != nil){
             print(Shared.instance.peripheral.name)
@@ -126,15 +126,15 @@ class AllDataViewController: UIViewController, UITableViewDataSource, UITableVie
         }
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

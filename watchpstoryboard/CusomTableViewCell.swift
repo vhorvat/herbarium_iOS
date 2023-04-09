@@ -10,5 +10,5 @@ import UIKit
 class CusomTableViewCell: UITableViewCell {
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var label: UILabel!
-
+    
 }

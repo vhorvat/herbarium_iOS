@@ -16,16 +16,42 @@ class Shared {
     static let instance = Shared()
     var bleManager: CBCentralManager!
     var peripheral: CBPeripheral!
+    
+    struct Zapis {
+        var index = 0
+        var temperature = 0.0
+        var air_m = 0.0
+        var smoke = 0.0
+        var light = 0.0
+        var soil_m = 0.0
+        var voc = 0.0
+        var sulf = 0.0
+        var air_p = 0.0
+        var benzene = 0.0
+        var pm25 = 0.0
+        var monoxide = 0.0
+        var methane = 0.0
+        var lpg = 0.0
+        var nh3 = 0.0
+        var dioxide = 0.0
+        var ozone = 0.0
+    }
+    
+    var zapis = Zapis()
+    
+    var AllData: [Zapis] = []
+    
+    
 }
 
 class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate {
     
     @IBOutlet weak var tableView1: UITableView!
-
+    
     
     var allData = ["","","","","","","","","","","","","","","","",""]
     var deviceNames = [String]()
-
+    
     var wPeripheral: CBPeripheral!
     var wCharacteristic: CBCharacteristic!
     
@@ -56,9 +82,20 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         
         let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
         notifCenter.add(request) { (error) in
-                }
+        }
         print("NOTIFIKACIJA!")
     }
+    
+    func createData(){
+        for i in 0...29{
+            Shared.instance.AllData.append(Shared.instance.zapis)
+            Shared.instance.AllData[i].index = i
+        }
+        print(Shared.instance.AllData)
+    }
+    
+    
+    
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         if central.state == CBManagerState.poweredOn {
             print("BLE STATE ON")
@@ -68,7 +105,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         else {
             print("BLE PROBLEM")
             currentConnectedName="Error"
-        
+            
         }
     }
     
@@ -101,8 +138,10 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
         print("Uređaj:\(peripheral) i servis na njemu: \(service)")
         for charasteristic in service.characteristics! {
-            if (charasteristic.uuid) == CBUUID(string: "EBCB181A-E01F-11EC-9D64-0242AC120002"){
+            print(charasteristic.uuid)
+            if (charasteristic.uuid) == CBUUID(string: "8DD6A1B7-BC75-4741-AA26-264AF7DADADA"){
                 peripheral.setNotifyValue(true, for: charasteristic)
+                print("istina")
             }
             if (charasteristic.uuid) == CBUUID(string: "FA2AF5EC-E01F-11EC-9D64-0242AC120002"){
                 print("I WROTE")
@@ -115,69 +154,11 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        if (characteristic.uuid) == CBUUID(string: "EBCB181A-E01F-11EC-9D64-0242AC120002"){
-            let currentValue = characteristic.value
+        if (characteristic.uuid) == CBUUID(string: "8DD6A1B7-BC75-4741-AA26-264AF7DADADA"){
+            let currentValue=characteristic.value
             let decodedString = String(bytes: currentValue!, encoding: .utf8)
-            let dataArray = decodedString!.components(separatedBy: ",")
-            let timestamp = dataArray[0]
-            let tempPCB = Double(dataArray[1])!/10000
-            let magX = Double(dataArray[2])!/1000
-            let magY = Double(dataArray[3])!/1000
-            let magZ = Double(dataArray[4])!/1000
-            let tempExternal = Double(dataArray[5])!/10000
-            let lightExternal = Double(dataArray[6])!/799.4 - 0.75056
-            let humidityExternalTemp = Double(dataArray[7])!
-            let humidityExternal = (humidityExternalTemp*3/4200000-0.1515)/(0.006707256-0.0000137376*(tempExternal/10000))
-            let differentialPotentialCH1 = dataArray[8]
-            let differentialPotentialCH2 = dataArray[9]
-            let RFpowerEmission = dataArray[10]
-            let transpiration = Double(dataArray[11])!/1000
-            let airPressure = Double(dataArray[12])!/100
-            let soilMoisture = dataArray[13]
-            let soilTemperature = Double(dataArray[14])!/10
-            let mu_mm = dataArray[15]
-            let mu_id = dataArray[16]
-            let sensorname = dataArray[17]
-            
-            self.allData[0] = String("Timestamp: \(timestamp) °C")
-            self.allData[1] = String("TempPCB: \(tempPCB) °C")
-            self.allData[2] = String("MagX: \(magX) G")
-            self.allData[3] = String("MagY: \(magY) G")
-            self.allData[4] = String("MagZ: \(magZ) G")
-            self.allData[5] = String("External temperature: \(tempExternal) °C")
-            self.allData[6] = String("External light: \(lightExternal) Lux")
-            self.allData[7] = String("External humidity: \(humidityExternal) %")
-            self.allData[8] = String("Differential CH1: \(differentialPotentialCH1) uV")
-            self.allData[9] = String("Differential CH2: \(differentialPotentialCH2) uV")
-            self.allData[10] = String ("RF Power Emission: \(RFpowerEmission)")
-            self.allData[11] = ("Transpiration: \(transpiration) %")
-            self.allData[12] = String("Air Pressure: \(airPressure) mBar")
-            self.allData[13] = String("Soil Moisture: \(soilMoisture)")
-            self.allData[14] = String("Soil Temperature: \(soilTemperature) °C")
-            self.allData[15] = String("mu_mm: \(mu_mm)")
-            self.allData[16] = String("mu_id: \(mu_id)")
-
-            if (characteristic.uuid) == CBUUID(string: "FA2AF5EC-E01F-11EC-9D64-0242AC120002"){
-                print("I READ WRITE VALUE")
-                let currentValue = characteristic.value
-                let decodedString = String(bytes: currentValue!, encoding: .utf8)
-            }
+            print(decodedString)
         }
-        //let value = [UInt8] (characteristic.value!)
-        //print("Trenutna vrijednost DEBUG RAW GATT DATA:\(currentValue)")
-        //let newValue = ((Int16(value[0])))
-        //let newHumidValue = ((Int16(value[1])))
-        //let intValue = Int(newValue)
-        // print("Trenutna vrijednost DEBUG DECOUPLE:\(intValue)")
-        // let interestedInValue=intValue
-        //print("Trenutna vrijednost DEBUG DECODE:\(interestedInValue)")
-        //print("Samo Humidty debuged:\(newHumidValue)")
-        //let newPressureValue1 = ((Int16(value[2])))
-        //let fixedPressureValue = "10" + String(newPressureValue1)
-        //currentTemperature = interestedInValue
-        //temperatureToShowLabel.text = String(interestedInValue) + " °C"
-        //humidityToShowLabel.text = String(newHumidValue) + " %"
-        //pressureToShowLabel.text = String(fixedPressureValue) + " hPa"
     }
     
     //FUNKCIJE ZA iBeacon LOKACIJU
@@ -199,7 +180,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
             greenHouseDoorStatus.text = "CLOSED"
         }
     }
-
+    
     @IBOutlet weak var greenHouseDoorState: UILabel!
     @IBOutlet weak var nameToShowLabel: UILabel!
     @IBOutlet weak var greenHouseDoorStatus: UILabel!
@@ -207,7 +188,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        createData()
         
         tableView1.delegate = self
         tableView1.dataSource = self
@@ -222,12 +203,11 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
 extension ViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.allBluetoothPeripherals[indexPath.row].delegate=self
-
+        
         print ("Stisnuo si redak:\(indexPath.row)")
         
         self.myPeripheral = allBluetoothPeripherals[indexPath.row]
         
-        nameToShowLabel.text = myPeripheral?.name //UPDATE NAME
         
         centralManager?.stopScan()
         centralManager?.connect(allBluetoothPeripherals[indexPath.row], options: nil)
@@ -242,7 +222,7 @@ extension ViewController: UITableViewDataSource{
         }
         print(allData.count)
         return allData.count
-        }
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == tableView1{
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
