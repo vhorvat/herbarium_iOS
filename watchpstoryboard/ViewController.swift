@@ -10,6 +10,9 @@ import CoreBluetooth
 import CoreLocation
 import UserNotifications
 import Foundation
+import AZSClient
+
+
 
 class Shared {
     private init(){ }
@@ -17,7 +20,7 @@ class Shared {
     var bleManager: CBCentralManager!
     var peripheral: CBPeripheral!
     
-    struct Zapis {
+    struct Zapis: Codable {
         var index = 0
         var temperature = 0.0
         var air_m = 0.0
@@ -37,9 +40,10 @@ class Shared {
         var ozone = 0.0
     }
     
+    var JSONData: String?
     var zapis = Zapis()
-    
     var AllData: [Zapis] = []
+    
     
     
 }
@@ -92,8 +96,38 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
             Shared.instance.AllData[i].index = i
         }
         print(Shared.instance.AllData)
+        var data = JSONIfyData()
+        sendDataToAzure(data: data)
     }
     
+    func JSONIfyData()->String{
+        do {
+            let jsonData = try JSONEncoder().encode(Shared.instance.AllData)
+            let jsonString = String(data: jsonData, encoding: .utf8)!
+            print(jsonString)
+            return jsonString
+        } catch { print(error) }
+        return "Error"
+    }
+    
+    func sendDataToAzure(data: String){
+        let account = try! AZSCloudStorageAccount(fromConnectionString:"DefaultEndpointsProtocol=https;AccountName=ferzariwatchplant;AccountKey=H6e6YvK5X3+J0Kv3KeHwDHTC22s9+Q98xkVSpSp2jSj2ilcVGlD5C5bHYbmxW+GB89GLOyWpbIAu+AStenrXmg==;EndpointSuffix=core.windows.net")
+        let blobClient: AZSCloudBlobClient = account.getBlobClient()
+        let blobContainer: AZSCloudBlobContainer = blobClient.containerReference(fromName: "herbarium-data")
+        blobContainer.createContainerIfNotExists(with: AZSContainerPublicAccessType.container, requestOptions: nil, operationContext: nil) { (NSError, Bool) -> Void in
+            if ((NSError) != nil){
+                NSLog("Error in creating container.")
+            }
+            else {
+                let name=CFUUIDCreateString(nil, CFUUIDCreate(nil))
+                let blob: AZSCloudBlockBlob = blobContainer.blockBlobReference(fromName: name! as String) //If you want a random name, I used let imageName = CFUUIDCreateString(nil, CFUUIDCreate(nil))
+                blob.upload(fromText: data, completionHandler: {(NSError) -> Void in
+                    NSLog("Ok, uploaded !")
+                })
+            }
+        }
+        
+    }
     
     
     func centralManagerDidUpdateState(_ central: CBCentralManager) {

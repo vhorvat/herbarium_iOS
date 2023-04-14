@@ -8,6 +8,7 @@ target 'BLE WPLANT' do
   # Pods for BLE WPLANT
   pod 'Charts'
   pod 'TinyConstraints'
+  pod 'AZSClient'
 
   target 'BLE WPLANTTests' do
     inherit! :search_paths
