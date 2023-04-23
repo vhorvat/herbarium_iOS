@@ -10,6 +10,7 @@ import Charts
 import TinyConstraints
 class hoc_ViewController: UIViewController {
     
+    @IBOutlet weak var trenutna: UILabel!
     @IBOutlet weak var chartView: UIView!
     lazy var lineChartView: LineChartView = {
         let chartView = LineChartView()
@@ -42,7 +43,7 @@ class hoc_ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Temperatura")
+        trenutna.text = String(Shared.instance.AllData[0].voc)+" ppm"
         // Do any additional setup after loading the view.
         
         chartView.addSubview(lineChartView)

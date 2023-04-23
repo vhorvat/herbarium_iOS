@@ -12,6 +12,7 @@ import TinyConstraints
 class vlaga_ViewController: UIViewController {
     
     @IBOutlet weak var chartView: UIView!
+    @IBOutlet weak var trenutna: UILabel!
     
     lazy var lineChartView: LineChartView = {
         let chartView = LineChartView()
@@ -44,7 +45,7 @@ class vlaga_ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Temperatura")
+        trenutna.text = String(Shared.instance.AllData[0].air_m)+" %"
         // Do any additional setup after loading the view.
         
         chartView.addSubview(lineChartView)

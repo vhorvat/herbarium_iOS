@@ -11,6 +11,7 @@ import TinyConstraints
 
 class osvijetljenje_ViewController: UIViewController {
     
+    @IBOutlet weak var trenutna: UILabel!
     @IBOutlet weak var chartView: UIView!
     lazy var lineChartView: LineChartView = {
         let chartView = LineChartView()
@@ -43,7 +44,7 @@ class osvijetljenje_ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Temperatura")
+        trenutna.text = String(Shared.instance.AllData[0].light)+" lux"
         // Do any additional setup after loading the view.
         
         chartView.addSubview(lineChartView)
