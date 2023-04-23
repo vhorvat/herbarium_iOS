@@ -91,43 +91,14 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     }
     
     func createData(){
-        for i in 0...29{
+        for i in 0...49{
             Shared.instance.AllData.append(Shared.instance.zapis)
             Shared.instance.AllData[i].index = i
         }
         print(Shared.instance.AllData)
-        var data = JSONIfyData()
-        sendDataToAzure(data: data)
     }
     
-    func JSONIfyData()->String{
-        do {
-            let jsonData = try JSONEncoder().encode(Shared.instance.AllData)
-            let jsonString = String(data: jsonData, encoding: .utf8)!
-            print(jsonString)
-            return jsonString
-        } catch { print(error) }
-        return "Error"
-    }
     
-    func sendDataToAzure(data: String){
-        let account = try! AZSCloudStorageAccount(fromConnectionString:"DefaultEndpointsProtocol=https;AccountName=ferzariwatchplant;AccountKey=H6e6YvK5X3+J0Kv3KeHwDHTC22s9+Q98xkVSpSp2jSj2ilcVGlD5C5bHYbmxW+GB89GLOyWpbIAu+AStenrXmg==;EndpointSuffix=core.windows.net")
-        let blobClient: AZSCloudBlobClient = account.getBlobClient()
-        let blobContainer: AZSCloudBlobContainer = blobClient.containerReference(fromName: "herbarium-data")
-        blobContainer.createContainerIfNotExists(with: AZSContainerPublicAccessType.container, requestOptions: nil, operationContext: nil) { (NSError, Bool) -> Void in
-            if ((NSError) != nil){
-                NSLog("Error in creating container.")
-            }
-            else {
-                let name=CFUUIDCreateString(nil, CFUUIDCreate(nil))
-                let blob: AZSCloudBlockBlob = blobContainer.blockBlobReference(fromName: name! as String) //If you want a random name, I used let imageName = CFUUIDCreateString(nil, CFUUIDCreate(nil))
-                blob.upload(fromText: data, completionHandler: {(NSError) -> Void in
-                    NSLog("Ok, uploaded !")
-                })
-            }
-        }
-        
-    }
     
     
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
@@ -173,7 +144,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         print("Uređaj:\(peripheral) i servis na njemu: \(service)")
         for charasteristic in service.characteristics! {
             print(charasteristic.uuid)
-            if (charasteristic.uuid) == CBUUID(string: "8DD6A1B7-BC75-4741-AA26-264AF7DADADA"){
+            if (charasteristic.uuid) == CBUUID(string: "8DD6A1B7-BC75-4741-8A26-264AF75807DE"){
                 peripheral.setNotifyValue(true, for: charasteristic)
                 print("istina")
             }
@@ -188,10 +159,108 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        if (characteristic.uuid) == CBUUID(string: "8DD6A1B7-BC75-4741-AA26-264AF7DADADA"){
+        if (characteristic.uuid) == CBUUID(string: "8DD6A1B7-BC75-4741-8A26-264AF75807DE"){
             let currentValue=characteristic.value
             let decodedString = String(bytes: currentValue!, encoding: .utf8)
             print(decodedString)
+            var index=0
+            for element in decodedString!.unicodeScalars{
+                let myInt = Double(element.value)
+                print("Mjerneje:"  + String(myInt))
+                print("Index" + String(index))
+                index=index+1
+                switch index{
+                case 0:
+                    Shared.instance.AllData[0].temperature = myInt
+                case 1:
+                    Shared.instance.AllData[0].air_m = myInt
+                case 2:
+                    Shared.instance.AllData[0].smoke = myInt
+                case 3:
+                    Shared.instance.AllData[0].light = myInt
+                case 4:
+                    Shared.instance.AllData[0].soil_m = myInt
+                case 5:
+                    Shared.instance.AllData[0].voc = myInt
+                case 6:
+                    Shared.instance.AllData[0].sulf = myInt
+                case 7:
+                    Shared.instance.AllData[0].air_p = myInt
+                case 8:
+                    Shared.instance.AllData[0].benzene = myInt
+                case 9:
+                    Shared.instance.AllData[0].pm25 = myInt
+                case 10:
+                    Shared.instance.AllData[0].monoxide = myInt
+                case 11:
+                    Shared.instance.AllData[0].methane = myInt
+                case 12:
+                    Shared.instance.AllData[0].lpg = myInt
+                case 13:
+                    Shared.instance.AllData[0].nh3 = myInt
+                case 14:
+                    Shared.instance.AllData[0].dioxide = myInt
+                case 15:
+                    Shared.instance.AllData[0].ozone = myInt
+                default:
+                    print("error", String(index))
+                    
+                }
+            }
+        }
+        
+        //        stream povijesnih podataka
+        if (characteristic.uuid) == CBUUID(string: "8DD6A1B7-BC75-4741-8A26-264AF75807DE"){
+            let currentValue=characteristic.value
+            let decodedString = String(bytes: currentValue!, encoding: .utf8)
+            print(decodedString)
+            var index = 0
+            var internIndex = 0
+            for element in decodedString!.unicodeScalars{
+                let myInt = Double(element.value)
+                print("Mjerneje:"  + String(myInt))
+                print("Index" + String(index))
+                index=index+1
+                switch index{
+                case 0:
+                    let internIndex = Int(myInt)
+                case 1:
+                    Shared.instance.AllData[internIndex].temperature = myInt
+                case 2:
+                    Shared.instance.AllData[internIndex].air_m = myInt
+                case 3:
+                    Shared.instance.AllData[internIndex].smoke = myInt
+                case 4:
+                    Shared.instance.AllData[internIndex].light = myInt
+                case 5:
+                    Shared.instance.AllData[internIndex].soil_m = myInt
+                case 6:
+                    Shared.instance.AllData[internIndex].voc = myInt
+                case 7:
+                    Shared.instance.AllData[internIndex].sulf = myInt
+                case 8:
+                    Shared.instance.AllData[internIndex].air_p = myInt
+                case 9:
+                    Shared.instance.AllData[internIndex].benzene = myInt
+                case 10:
+                    Shared.instance.AllData[internIndex].pm25 = myInt
+                case 11:
+                    Shared.instance.AllData[internIndex].monoxide = myInt
+                case 12:
+                    Shared.instance.AllData[internIndex].methane = myInt
+                case 13:
+                    Shared.instance.AllData[internIndex].lpg = myInt
+                case 14:
+                    Shared.instance.AllData[internIndex].nh3 = myInt
+                case 15:
+                    Shared.instance.AllData[internIndex].dioxide = myInt
+                case 16:
+                    Shared.instance.AllData[internIndex].ozone = myInt
+                default:
+                    print("error", String(index))
+                    
+                }
+            }
         }
     }
     
@@ -226,6 +295,8 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         
         tableView1.delegate = self
         tableView1.dataSource = self
+        //        deviceNames.append("FER BLE SENSOR 1")
+        //        deviceNames.append("FER BLE SENSOR 2")
         
         
         centralManager = CBCentralManager(delegate: self, queue: nil)

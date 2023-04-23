@@ -19,12 +19,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWh-ha-6Jv">
-                                <rect key="frame" x="30" y="222" width="360" height="198"/>
+                                <rect key="frame" x="30" y="222" width="360" height="245.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="198" id="q8d-X9-rTH"/>
+                                    <constraint firstAttribute="height" constant="245.5" id="q8d-X9-rTH"/>
                                 </constraints>
-                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <string key="text">Temperatura je osnovna fizikalna veličina prema Međunarodnom sustavu jedinica, a mjeri se termometrom. Prva proučavanja i mjerenje temperature javljaju se još u vrijeme Herona iz Aleksandrije, a modernu verziju termometra razvio je Galileo Galilei. Postoji čak 5 temperaturnih ljestvica, a u Europi se koristi Celzijeva direktno povezana s točkama vrelišta i ledišta vode. Mjerenje temperature zraka uvelike je doprinjelo razvoju meterologije, a i danas je jedno od najvažnijih i najčešćih mjerenja.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -33,8 +33,8 @@
                                 <rect key="frame" x="20" y="576" width="374" height="178"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kretanje temeperature zraka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5L-DD-QLX">
-                                <rect key="frame" x="94" y="537" width="241" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Kretanje temeperature zraka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5L-DD-QLX">
+                                <rect key="frame" x="90" y="546" width="241" height="22"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -54,8 +54,17 @@
                                     <constraint firstAttribute="width" constant="122" id="u6J-TR-ECG"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trenutna temperatura zraka: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYs-Fn-IIG">
-                                <rect key="frame" x="45" y="438" width="237" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Trenutna temperatura zraka: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYs-Fn-IIG">
+                                <rect key="frame" x="30" y="486" width="237" height="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="15 °C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7h-7l-9gH">
+                                <rect key="frame" x="275" y="485" width="78" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="TJa-QI-18p"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -66,19 +75,24 @@
                         <constraints>
                             <constraint firstItem="yja-k2-51w" firstAttribute="leading" secondItem="bWh-ha-6Jv" secondAttribute="leading" constant="-10" id="0Od-Z7-IlB"/>
                             <constraint firstItem="yja-k2-51w" firstAttribute="centerY" secondItem="jjR-TD-ohV" secondAttribute="centerY" id="0TJ-qB-Gd2"/>
+                            <constraint firstItem="Q7h-7l-9gH" firstAttribute="top" secondItem="bWh-ha-6Jv" secondAttribute="bottom" constant="17.5" id="1HZ-fk-Eaz"/>
                             <constraint firstItem="H2h-sA-FJK" firstAttribute="leading" secondItem="Vig-Ys-jgi" secondAttribute="leadingMargin" id="2cM-GU-lpb"/>
                             <constraint firstItem="H2h-sA-FJK" firstAttribute="top" secondItem="n5L-DD-QLX" secondAttribute="bottom" constant="18" id="6md-ch-nlk"/>
                             <constraint firstItem="bWh-ha-6Jv" firstAttribute="top" secondItem="yja-k2-51w" secondAttribute="bottom" constant="8" id="Bl3-LM-nIm"/>
                             <constraint firstItem="n5L-DD-QLX" firstAttribute="centerX" secondItem="H2h-sA-FJK" secondAttribute="centerX" constant="7.5" id="CeD-5U-BXR"/>
                             <constraint firstItem="yja-k2-51w" firstAttribute="top" secondItem="lwd-4i-Frb" secondAttribute="top" id="DEH-Be-H7h"/>
                             <constraint firstItem="lwd-4i-Frb" firstAttribute="trailing" secondItem="jjR-TD-ohV" secondAttribute="trailing" constant="78" id="FLv-HM-lEB"/>
+                            <constraint firstItem="Q7h-7l-9gH" firstAttribute="baseline" secondItem="uYs-Fn-IIG" secondAttribute="firstBaseline" id="PFm-Z8-wCn"/>
+                            <constraint firstItem="Q7h-7l-9gH" firstAttribute="leading" secondItem="uYs-Fn-IIG" secondAttribute="trailing" constant="8" id="QGE-Is-6p3"/>
                             <constraint firstItem="H2h-sA-FJK" firstAttribute="trailing" secondItem="bWh-ha-6Jv" secondAttribute="trailing" constant="4" id="V65-mA-leB"/>
                             <constraint firstItem="lwd-4i-Frb" firstAttribute="bottom" secondItem="H2h-sA-FJK" secondAttribute="bottom" constant="59" id="Yuc-Dp-fnC"/>
-                            <constraint firstItem="uYs-Fn-IIG" firstAttribute="leading" secondItem="lwd-4i-Frb" secondAttribute="leading" constant="45" id="c5U-eb-7pw"/>
+                            <constraint firstItem="uYs-Fn-IIG" firstAttribute="leading" secondItem="lwd-4i-Frb" secondAttribute="leading" constant="57" id="c5U-eb-7pw"/>
                             <constraint firstItem="yja-k2-51w" firstAttribute="leading" secondItem="lwd-4i-Frb" secondAttribute="leading" constant="20" id="df4-0C-JyQ"/>
                             <constraint firstItem="H2h-sA-FJK" firstAttribute="top" secondItem="Vig-Ys-jgi" secondAttribute="top" constant="576" id="fhg-kE-4jM"/>
+                            <constraint firstItem="uYs-Fn-IIG" firstAttribute="centerY" secondItem="Q7h-7l-9gH" secondAttribute="centerY" id="gbq-0g-vNT"/>
                             <constraint firstItem="jjR-TD-ohV" firstAttribute="leading" secondItem="yja-k2-51w" secondAttribute="trailing" constant="8" id="hdc-VL-pA2"/>
                             <constraint firstItem="n5L-DD-QLX" firstAttribute="leading" secondItem="lwd-4i-Frb" secondAttribute="leading" constant="94" id="m1w-on-8qz"/>
+                            <constraint firstItem="n5L-DD-QLX" firstAttribute="top" secondItem="uYs-Fn-IIG" secondAttribute="bottom" constant="30.5" id="pZ7-Te-3I0"/>
                             <constraint firstItem="jjR-TD-ohV" firstAttribute="top" secondItem="lwd-4i-Frb" secondAttribute="top" constant="40" id="vFn-lw-aZS"/>
                             <constraint firstItem="bWh-ha-6Jv" firstAttribute="trailing" secondItem="Vig-Ys-jgi" secondAttribute="trailingMargin" constant="-4" id="x4t-Gp-Q0t"/>
                             <constraint firstItem="uYs-Fn-IIG" firstAttribute="top" secondItem="bWh-ha-6Jv" secondAttribute="bottom" constant="18" id="yZA-28-Qvh"/>
@@ -127,11 +141,34 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="198" id="XXu-ie-TLy"/>
                                 </constraints>
-                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <string key="text">Vlažnost zraka definirana je kao udio vodene pare u zraku. Postoje mnogi načini definiranja vlažnosti poput aposolutne i relativne, parcijalnog tlaka vodene pare i ini drugi. Relativnu vlažnost koja se ovdje mjeri podrazumijeva zrak oko nas koji je nezasićen vodenom parom, odnosno omjer iznosa trenutno prisutne vodene pare u odnosu na njenu maksimalmnu vrijednost. Mjerimo je u postocima.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trenutna vlažnost zraka: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FY9-oh-XPo">
+                                <rect key="frame" x="20" y="438" width="205" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kretanje vlage zraka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXz-i2-S58">
+                                <rect key="frame" x="117" y="546" width="181" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="15 °C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTu-eD-hsN">
+                                <rect key="frame" x="233" y="438" width="78" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="oAl-ua-Qaf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XxX-uq-qUU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -193,11 +230,25 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="198" id="RMT-8p-i6J"/>
                                 </constraints>
-                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <string key="text">Dim je najčešće u zraku prisutan kao nusprodukt nepotpunog izgaranja tvari. Jedan je od glavnih onečišćivača zraka i krivaca za smanjenu kvalitetu života. Uz ljude, predstavlja i velik rizik za manje životinje te insekte, a posebno su pogođene pčele. Udio u zraku mjeri se u jedinici ppm (parts per milion), a nužno je kloniti se prosotra s njegovim visokim udjelom.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kretanje zastupljenosti dima" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JK-r0-SKs">
+                                <rect key="frame" x="91" y="546" width="232" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trenutna zastupljenost dima:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsD-bq-6xa">
+                                <rect key="frame" x="20" y="438" width="240" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CwE-d7-Wo2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -253,17 +304,31 @@
                                 <rect key="frame" x="20" y="576" width="374" height="178"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="37X-cb-d0P">
-                                <rect key="frame" x="20" y="222" width="360" height="198"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="37X-cb-d0P">
+                                <rect key="frame" x="20" y="222" width="360" height="208"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="198" id="XjU-Xh-lXP"/>
                                 </constraints>
-                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <string key="text">Osvijetljenje ili iluminacija fizikalna je veličina iz područja fotometrije. Mjerenjem osvijetljenja opisujemo količinu upadanja svijetlosti na neku plohu. Uređaj kojim se mjeri osvijetljenje je luxmetar, a nazvan je prema mjernoj jedinici lux. Mjerna jedinica lux izvedenica je SI sustava, a zamjenjuje lumen po metru. Ocem fotometrije smatramo Johanna Heinricha Lamberta, a prva mjerenja sežu iz 18. stoljeća </string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kretanje osvijetljenja" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncu-wT-iLQ">
+                                <rect key="frame" x="120" y="546" width="175" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trenutna osvijetljenost:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngv-Q4-bpa">
+                                <rect key="frame" x="20" y="448" width="199" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ufg-Bs-qeP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -290,7 +355,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AnD-eN-xr4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="377" y="1173"/>
+            <point key="canvasLocation" x="376.81159420289856" y="1172.5446428571429"/>
         </scene>
         <!--Vlaznost View Controller-->
         <scene sceneID="taA-Ao-dpA">
@@ -300,7 +365,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vlaznost tla" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gca-rK-SuQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vlažnost tla" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gca-rK-SuQ">
                                 <rect key="frame" x="150" y="132" width="186" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="xjE-aP-MyR"/>
@@ -321,16 +386,30 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kRz-oU-h4F">
-                                <rect key="frame" x="20" y="222" width="360" height="198"/>
+                                <rect key="frame" x="20" y="222" width="360" height="191"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="198" id="msv-lE-fn9"/>
                                 </constraints>
-                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <string key="text">Vlažnost tla podrazumijeva vodu prisutnu u tlima. Njena dovoljnja prisutnost izuzetno je bitna za ispravan rast biljaka kao i pedološke procese u njima. Mjerenje vlažnosti tla ostvaruje se vlagomjerom., a mjerimo relativnu vlažnost tla. Mjerna jedinica je VWC (volumetric water content), a izračena je kao omjer volumnog udijela vode i tla.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kretanje vlažnosti tla" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIx-8G-ltx">
+                                <rect key="frame" x="119" y="546" width="177" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trenutna vlažnost tla:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cxc-b7-iZz">
+                                <rect key="frame" x="20" y="438" width="199" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ug4-Js-FEs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -350,7 +429,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f4h-Ap-Tqs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1138" y="1173"/>
+            <point key="canvasLocation" x="1137.68115942029" y="1172.5446428571429"/>
         </scene>
         <!--Hoc View Controller-->
         <scene sceneID="87k-DA-RkD">
@@ -389,16 +468,30 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Vjk-UB-PK8">
-                                <rect key="frame" x="20" y="222" width="360" height="198"/>
+                                <rect key="frame" x="20" y="222" width="360" height="207"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="198" id="3ID-S7-scP"/>
+                                    <constraint firstAttribute="height" constant="207" id="3ID-S7-scP"/>
                                 </constraints>
-                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <string key="text">Organski spoj je spoj koji u sebi sadrži najmanje ugljik i jedan ili više sljedećih elemenata: vodik, kisik, sumpor, fosfor, silicij, dušik ili halogen, izuzimajući ugljikove okside, anorganske karbonate i bikarbonate. Hlapivi organski spoj je svaki organski spoj čija je početna točka vrelišta niža ili jednaka 250 °C, izmjerena pri standardnom tlaku. Izrazito su opasni za ljude. Mjerimo ih u ppm (parts per milion) vrijednostima.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kretanje hlapljivih organskih spojeva" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8V-5e-wlS">
+                                <rect key="frame" x="58" y="546" width="298" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trenutna vrijednost HOS-a:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nke-zm-I49">
+                                <rect key="frame" x="20" y="452" width="223" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kGX-U1-2tR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -457,17 +550,31 @@
                                 <rect key="frame" x="20" y="576" width="374" height="178"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7ER-e8-cEH">
-                                <rect key="frame" x="20" y="222" width="360" height="198"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7ER-e8-cEH">
+                                <rect key="frame" x="20" y="222" width="360" height="165"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="198" id="bal-u2-IeA"/>
                                 </constraints>
-                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <string key="text">Ugljični monoksid plin je bez boje i mirisa koji nastaje nepotpunim izgaranjem tvari koje su izgrađene od ugljika. Plin je izuzetno opasan i otrovan po ljudsko zdravlje jer se veže za hemoglobin u krvi čime sprječava prijenos kisika po tijelu. Mjerimo ga u ppm (part per milion).</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kretajne ugljičnog monoksida u zraku" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsT-31-Afb">
+                                <rect key="frame" x="55" y="546" width="305" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trenutna vrijednost monoksida:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ue8-RH-QKB">
+                                <rect key="frame" x="20" y="417" width="258" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="USu-80-AwB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -529,11 +636,25 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="198" id="5wU-Ou-pfm"/>
                                 </constraints>
-                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <string key="text">Metan je spoj sačnjen od vodika i vodika te je najjednostavniji predstavnik ugljikovodika. U narodu je poznat i kao močvarni plin jer se razvija u barama i močvarama gdje signalizira pojavu truljenja organske tvari, odnosno tvari sačinjenih od ugljika. Jak je staklenički plin, a premda direktno nije opasan za ljudsko zdravlje njegova opasnost leži u lakoj zapaljivosti i eksplozivnosti.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kretajne metana u zraku" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rd9-0j-cao">
+                                <rect key="frame" x="104" y="546" width="207" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trenutna vrijednost metana:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Knu-fd-Ptw">
+                                <rect key="frame" x="20" y="438" width="230" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ipd-ST-7a4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -560,7 +681,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O2l-wi-X6E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1158" y="2579"/>
+            <point key="canvasLocation" x="-1159.4202898550725" y="2578.7946428571427"/>
         </scene>
         <!--Lpg View Controller-->
         <scene sceneID="2zr-8M-2qp">
@@ -598,17 +719,31 @@
                                 <rect key="frame" x="20" y="576" width="374" height="178"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Azs-n6-bnI">
-                                <rect key="frame" x="20" y="222" width="360" height="198"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Azs-n6-bnI">
+                                <rect key="frame" x="20" y="222" width="360" height="158"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="198" id="Vbs-VF-v4H"/>
                                 </constraints>
-                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <string key="text">LPG ili u punom nazivu ukapljeni naftni plin mješavina je propana i butana, ugljikovodika, a koristi se najviše kao pogodnsko gorivo u autoindustriji. Prisutnost u okolišu nije opasna po zdravlje ljudi, barem ne u niskim koncentracijama, no njegova laka zapaljivost i eksplozivnost čini ga opasnim.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kretajne LPGa u zraku" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXV-iz-foj">
+                                <rect key="frame" x="113" y="546" width="189" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trenutna vrijednost metana:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27C-NL-Cpi">
+                                <rect key="frame" x="20" y="421" width="230" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ynf-xP-Mug"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -638,7 +773,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vj4-0a-gmM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-371" y="2579"/>
+            <point key="canvasLocation" x="-371.01449275362324" y="2578.7946428571427"/>
         </scene>
         <!--Nh3 View Controller-->
         <scene sceneID="4xr-iJ-IfE">
@@ -667,17 +802,31 @@
                                 <rect key="frame" x="20" y="576" width="374" height="178"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="se0-mO-QOn">
-                                <rect key="frame" x="20" y="222" width="360" height="198"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="se0-mO-QOn">
+                                <rect key="frame" x="20" y="222" width="360" height="160"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="198" id="bJS-z4-TMK"/>
                                 </constraints>
-                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <string key="text">Amonijak je spoj dušika i vodika. Vrlo lako se otapa u vodi, a njegova otopina je kisela i opasna je po ljudsko zdravlje i korozivna za mnoge tvari. U kućanstvu se može pronaći u sredstvima za čišćenje. Kod ljudi se proizvodi u jetri kao dio ureee, a njegova prevelika količina u ljudskom tijelu je toksična. </string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kretajne amonijaka u zraku" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHt-ah-nof">
+                                <rect key="frame" x="90" y="546" width="234" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trenutna vrijednost amonijaka: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdO-Pg-LGd">
+                                <rect key="frame" x="20" y="413" width="266" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="i8g-IT-n73"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -704,7 +853,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pA5-aE-vi5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="377" y="2579"/>
+            <point key="canvasLocation" x="376.81159420289856" y="2578.7946428571427"/>
         </scene>
         <!--Co2 View Controller-->
         <scene sceneID="Jwm-N8-TEC">
@@ -734,16 +883,30 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B8b-fE-QO2">
-                                <rect key="frame" x="20" y="222" width="360" height="198"/>
+                                <rect key="frame" x="20" y="222" width="360" height="171"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="198" id="FBL-jk-bCn"/>
+                                    <constraint firstAttribute="height" constant="171" id="FBL-jk-bCn"/>
                                 </constraints>
-                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <string key="text">Ugljični dioksid plin je bez boje i bez mirisa, prisutan u Zemljinoj atmosferi. Njegova koncentracija u atmosferi oscilira dnevno, ali sezonski jer su njegov najveći potrošać zelene biljke. Njegove male koncentracije nisu opasne, dok već kod 1% prisutnosti može izazvati ozbiljne nuspojave kod ljudi, a 5% može izazvati gubitak svijesti.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kretajne ugljičnog dioksida u zraku" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTz-QD-3dp">
+                                <rect key="frame" x="55" y="540" width="305" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vrijednost ugljičnog diosida: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lf7-lf-3YM">
+                                <rect key="frame" x="20" y="421" width="235" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LKE-wq-P3u"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -805,11 +968,25 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="198" id="t5b-AS-Bnz"/>
                                 </constraints>
-                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <string key="text">Sumpor je kemijski element, bez mirisa, krutina žute boje pri standardnim uvjetima. Njegovim izgaranjem nastaje sumporov dioksid koji u kontaktu s vodom stvara sumpornu kiselinu. Pojava sumporne kiseline u zraku odgovorna je za pojavu tkzv. kiselih kiša, a izuzteno je opasna i za ljude i za biljke. Udio sumpora mjeri se između 10 i 1000 ppm (parts per milion).</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kretanje sumpora u zraku" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88X-uv-cai">
+                                <rect key="frame" x="101" y="546" width="212" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trenutna vrijednost sumpora:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cam-Uh-K7E">
+                                <rect key="frame" x="20" y="452" width="249" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hd7-D8-881"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -836,7 +1013,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R4V-lJ-pos" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1158" y="1884"/>
+            <point key="canvasLocation" x="-1159.4202898550725" y="1883.7053571428571"/>
         </scene>
         <!--Tlak View Controller-->
         <scene sceneID="6pm-Ab-h8d">
@@ -871,11 +1048,25 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="198" id="ka5-m0-LWE"/>
                                 </constraints>
-                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <string key="text">Atmosferski tlak zraka fizikalna je mjera hidrostatskog tlaka kojeg uzrokuje stupac zraka iznad točke mjerenja. Mjeri se barometrom, a u direktnoj je poveznici s vlažnošću zraka. Tlak zraka mjerimo u barima, no u meterologiji je preferirana fizikalna veličina hPa (hektopaskal). Mjerenje zraka bilo je prvo meterološko mjerenje u povijesti, sredinom 17. stoljeća.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kretanje tlaka zraka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAf-4j-doT">
+                                <rect key="frame" x="118" y="546" width="165" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vrijednost tlaka zraka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ZT-CT-Msk">
+                                <rect key="frame" x="20" y="455" width="176" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FwS-jN-OaF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -931,17 +1122,31 @@
                                 <rect key="frame" x="20" y="576" width="374" height="178"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0ij-d8-zw2">
-                                <rect key="frame" x="20" y="222" width="360" height="198"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0ij-d8-zw2">
+                                <rect key="frame" x="20" y="222" width="360" height="150"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="198" id="1lh-Wx-hhf"/>
                                 </constraints>
-                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <string key="text">Benzen je ugljikovodik. Opasan je po zdravlje zbog svojih kancerogenih efekata, povećava rizik za razvojem raka, a šteti i koštanoj srži. Pojavljuje se u ispušnim plinovima motornih vozila s unutarnjim izgaranjem, a njegova jedina dopuštena vrijednost je 0. Mjerimo ga između 10 i 1000 ppm (parts per milion).</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kretajne benzena u zraku" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xyl-0N-Ckm">
+                                <rect key="frame" x="104" y="546" width="206" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prisutnost benzena u zraku:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtt-6F-S9I">
+                                <rect key="frame" x="20" y="404" width="227" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uXe-y5-Twv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -968,7 +1173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3GW-3b-eN8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="377" y="1892"/>
+            <point key="canvasLocation" x="376.81159420289856" y="1891.7410714285713"/>
         </scene>
         <!--Pm25 View Controller-->
         <scene sceneID="tTK-5f-1eE">
@@ -999,16 +1204,30 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bg4-oO-GWC">
-                                <rect key="frame" x="20" y="222" width="360" height="198"/>
+                                <rect key="frame" x="20" y="222" width="360" height="207"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="198" id="O0g-QD-MQA"/>
                                 </constraints>
-                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <string key="text">PM (Particulate matter) sitne su čestice koje zagađuju zrak. Prirodne čestice rezultat su požara i vulkanske aktivnosti, no primarni izvor čestica prašine je ljudska aktivnost (spaljivanje otpada, industrijska postrojenja, prerada metala, rudarstvo ili izgaranje fosilnih goriva). PM2.5 čestice veličine su do 2,5 mikrometara, a opasne su jer ulaze dublje u pluća ljudi i životinja, oštećuju ih te mogu ući direktno u krvotok.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kretajne PM2.5 čestica u zraku" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQx-wX-17g">
+                                <rect key="frame" x="81" y="561" width="252" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prisutnost PM2.5 u zraku:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhu-Nn-Hsw">
+                                <rect key="frame" x="20" y="457" width="210" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rAI-rC-6Au"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1058,22 +1277,42 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TIC-PX-HIS">
-                                <rect key="frame" x="20" y="222" width="360" height="198"/>
+                                <rect key="frame" x="20" y="222" width="360" height="228"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="198" id="7fy-n4-7JT"/>
+                                    <constraint firstAttribute="height" constant="228" id="7fy-n4-7JT"/>
                                 </constraints>
-                                <string key="text">Mjerenje temperautre izrazito je važno jer mjerenjem temperature saznajemo temperaturu. Da ne mjerimo tempreturu ne bismo znali kolika je temperatura, a kada temperaturu izmjerimo ovdje prikazujemo vrijednosti mjerenja temeprature naše aplikacije. Prikazujemo trenutno mjerenje temperature i grafički povijesna mjerenja temperature.</string>
+                                <string key="text">Ozon je plin, alotrop kisika. U Zemljinoj je atmosferi smješten u stratosferi. Odgovoran je za upijanje nekih valnih duljina ultraljubičastog zračenja te bez njega život na Zemlji ne bi bio moguć. Za razliku od stratosfere, pri tlu je ozon nepoželjan jer je jako oksiditivno sredstvo, a dio je gradskoga smoga i zbog toga je u konstatnom porastu. Javlja se u većim koncentracijama i nakon grmljavniskih oluja, što je i dovelo do njegove detekcije u 19. stoljeću.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kretajne ozona u zraku" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wc-M9-ss7">
+                                <rect key="frame" x="104" y="520" width="206" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prisutnost ozona u zraku:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fT3-S0-agW">
+                                <rect key="frame" x="20" y="467" width="290" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="vGL-oA-zxH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Jaw-uQ-f5M"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="7wc-M9-ss7" firstAttribute="leading" secondItem="Jaw-uQ-f5M" secondAttribute="leading" constant="104" id="24C-Pn-9ef"/>
+                            <constraint firstItem="hWb-TA-RF0" firstAttribute="top" secondItem="7wc-M9-ss7" secondAttribute="bottom" constant="8" id="3hc-j0-HdY"/>
+                            <constraint firstItem="fT3-S0-agW" firstAttribute="trailing" secondItem="7wc-M9-ss7" secondAttribute="trailing" id="7uR-7A-iPJ"/>
                             <constraint firstItem="uip-fW-Pw0" firstAttribute="leading" secondItem="S7B-rq-qhM" secondAttribute="leadingMargin" id="FUH-j4-g6z"/>
                             <constraint firstItem="hWb-TA-RF0" firstAttribute="top" secondItem="S7B-rq-qhM" secondAttribute="top" constant="550" id="Oh9-TB-iyi"/>
+                            <constraint firstItem="7wc-M9-ss7" firstAttribute="centerX" secondItem="hWb-TA-RF0" secondAttribute="centerX" id="RJl-ND-DFY"/>
+                            <constraint firstItem="fT3-S0-agW" firstAttribute="top" secondItem="TIC-PX-HIS" secondAttribute="bottom" constant="17" id="RZB-W9-ZTI"/>
                             <constraint firstItem="Jaw-uQ-f5M" firstAttribute="bottom" secondItem="hWb-TA-RF0" secondAttribute="bottom" constant="85" id="Uj9-QJ-jDP"/>
                             <constraint firstItem="TIC-PX-HIS" firstAttribute="leading" secondItem="uip-fW-Pw0" secondAttribute="leading" id="W8E-2y-daB"/>
                             <constraint firstItem="hWb-TA-RF0" firstAttribute="trailing" secondItem="S7B-rq-qhM" secondAttribute="trailingMargin" id="brH-s4-bch"/>
@@ -1083,6 +1322,8 @@
                             <constraint firstItem="OkV-Bl-Pia" firstAttribute="top" secondItem="Jaw-uQ-f5M" secondAttribute="top" constant="40" id="jh8-wL-yzq"/>
                             <constraint firstItem="OkV-Bl-Pia" firstAttribute="leading" secondItem="uip-fW-Pw0" secondAttribute="trailing" constant="8" id="k5w-to-zxW"/>
                             <constraint firstItem="Jaw-uQ-f5M" firstAttribute="trailing" secondItem="TIC-PX-HIS" secondAttribute="trailing" constant="34" id="kYg-3s-ZW1"/>
+                            <constraint firstItem="7wc-M9-ss7" firstAttribute="top" secondItem="fT3-S0-agW" secondAttribute="bottom" constant="32" id="sqI-gX-yzd"/>
+                            <constraint firstItem="fT3-S0-agW" firstAttribute="leading" secondItem="hWb-TA-RF0" secondAttribute="leading" id="tPZ-yB-vES"/>
                             <constraint firstItem="TIC-PX-HIS" firstAttribute="top" secondItem="uip-fW-Pw0" secondAttribute="bottom" constant="8" id="tvF-eM-dcq"/>
                             <constraint firstItem="uip-fW-Pw0" firstAttribute="top" secondItem="Jaw-uQ-f5M" secondAttribute="top" id="yHa-vW-bMh"/>
                         </constraints>
@@ -1094,7 +1335,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="onI-9C-Pos" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2075" y="1828"/>
+            <point key="canvasLocation" x="2073.913043478261" y="1827.4553571428571"/>
         </scene>
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
@@ -1137,12 +1378,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tip napajanja" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhy-Jh-oJ8">
-                                <rect key="frame" x="238" y="704" width="102" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lokacija senzora" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hd0-IK-Upw">
                                 <rect key="frame" x="238" y="733" width="133" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1173,6 +1408,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip napajanja" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhy-Jh-oJ8">
+                                <rect key="frame" x="238" y="704" width="101" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1360,26 +1601,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="About screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDX-QZ-jtV">
-                                <rect key="frame" x="113" y="85" width="190" height="86"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Z9K-B4-azH">
+                                <rect key="frame" x="32" y="274" width="355" height="169"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="86" id="NSW-UJ-cYM"/>
+                                    <constraint firstAttribute="height" constant="169" id="dqy-Ea-Mqg"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="27"/>
+                                <string key="text">Ova aplikacija nastala je zajedničkim radom studenata Fakulteta elektrotehnike i računarastva u Zagrebu Marka Kozlika i Viktora Horvata pod mentorstvom [MENTORI] a za njen ispravan rad potrebno ju je upariti s komplementarno razvijenim BLE senzorskom mrežom. </string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAD-Ri-PuT">
+                                <rect key="frame" x="125" y="629" width="168" height="54"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Pošalji podatke" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="Bm8-N1-meU" eventType="touchUpInside" id="R6a-P3-VS5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HERBARIUM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2v-2E-lGh">
+                                <rect key="frame" x="55" y="113" width="309" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="mJX-XG-S2p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mcE-cf-BI7">
+                                <rect key="frame" x="32" y="469" width="350" height="129"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="129" id="tlc-ZH-n7J"/>
+                                </constraints>
+                                <string key="text">Aplikacija omogućuje dijeljenje podataka prikupljinih spajanjem na mikrokontrolersku mrežu te njen prijenos na uslugu Azure. Pritiskom na donju tipku šaljete svoja anonimizirana mjerenja i doprinosite radu projekta.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Created with ❤️ at FER" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="52m-e0-MG8">
+                                <rect key="frame" x="50" y="728" width="318" height="36"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Kcu-ua-PaG"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KOJ-yl-Xpy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="LDX-QZ-jtV" firstAttribute="leading" secondItem="KOJ-yl-Xpy" secondAttribute="leading" constant="122" id="79e-2e-eQV"/>
-                            <constraint firstItem="LDX-QZ-jtV" firstAttribute="top" secondItem="KOJ-yl-Xpy" secondAttribute="top" constant="37" id="7Eg-GQ-pwM"/>
+                            <constraint firstItem="tAD-Ri-PuT" firstAttribute="top" secondItem="mcE-cf-BI7" secondAttribute="bottom" constant="31" id="1cy-hs-b8q"/>
+                            <constraint firstItem="tAD-Ri-PuT" firstAttribute="leading" secondItem="KOJ-yl-Xpy" secondAttribute="leading" constant="125" id="5d3-f2-Baz"/>
+                            <constraint firstItem="KOJ-yl-Xpy" firstAttribute="bottom" secondItem="tAD-Ri-PuT" secondAttribute="bottom" constant="130" id="96h-Po-BMy"/>
+                            <constraint firstItem="F2v-2E-lGh" firstAttribute="top" secondItem="KOJ-yl-Xpy" secondAttribute="top" constant="65" id="9ad-tT-EmJ"/>
+                            <constraint firstItem="Z9K-B4-azH" firstAttribute="top" secondItem="F2v-2E-lGh" secondAttribute="bottom" constant="75" id="Ag9-iL-zok"/>
+                            <constraint firstItem="F2v-2E-lGh" firstAttribute="leading" secondItem="KOJ-yl-Xpy" secondAttribute="leading" constant="55" id="QUb-yV-2Dp"/>
+                            <constraint firstItem="KOJ-yl-Xpy" firstAttribute="trailing" secondItem="Z9K-B4-azH" secondAttribute="trailing" constant="27" id="UYw-iX-mgF"/>
+                            <constraint firstItem="Z9K-B4-azH" firstAttribute="leading" secondItem="mcE-cf-BI7" secondAttribute="leading" id="V76-RN-lCC"/>
+                            <constraint firstItem="mcE-cf-BI7" firstAttribute="centerX" secondItem="6Ko-Ig-l9L" secondAttribute="centerX" id="VT2-gO-1He"/>
+                            <constraint firstItem="mcE-cf-BI7" firstAttribute="centerX" secondItem="tAD-Ri-PuT" secondAttribute="centerX" constant="-2" id="Vrf-Br-PVC"/>
+                            <constraint firstItem="52m-e0-MG8" firstAttribute="top" secondItem="tAD-Ri-PuT" secondAttribute="bottom" constant="45" id="Vyi-2q-2pl"/>
+                            <constraint firstItem="KOJ-yl-Xpy" firstAttribute="trailing" secondItem="F2v-2E-lGh" secondAttribute="trailing" constant="50" id="ayk-zW-aFF"/>
+                            <constraint firstItem="F2v-2E-lGh" firstAttribute="leading" secondItem="Z9K-B4-azH" secondAttribute="leading" constant="23" id="k6O-sc-tPC"/>
+                            <constraint firstItem="52m-e0-MG8" firstAttribute="leading" secondItem="KOJ-yl-Xpy" secondAttribute="leading" constant="50" id="m2e-Jy-1iB"/>
+                            <constraint firstItem="mcE-cf-BI7" firstAttribute="top" secondItem="Z9K-B4-azH" secondAttribute="bottom" constant="26" id="q3W-xY-NHP"/>
+                            <constraint firstItem="tAD-Ri-PuT" firstAttribute="centerX" secondItem="52m-e0-MG8" secondAttribute="centerX" id="qm2-VB-vit"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Info" id="dkW-yb-pLO">
                         <imageReference key="image" image="info.square" catalog="system" symbolScale="large"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="button" destination="tAD-Ri-PuT" id="v1s-US-VbG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jst-4w-Uxh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

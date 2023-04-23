@@ -64,9 +64,64 @@ class temperatura_ViewController: UIViewController, ChartViewDelegate {
     func setData(){
         var yValues: [ChartDataEntry] = []
         
-        for i in (0...29){
-            yValues.append(ChartDataEntry(x: Double(i), y: Shared.instance.AllData[i].temperature))
-        }
+//        for i in (0...29){
+//            yValues.append(ChartDataEntry(x: Double(i), y: Shared.instance.AllData[i].temperature))
+//        }
+        yValues.append(ChartDataEntry(x: 1, y: 19.2))
+        yValues.append(ChartDataEntry(x: 2, y: 17.4))
+        yValues.append(ChartDataEntry(x: 3, y: 15.2))
+        yValues.append(ChartDataEntry(x: 4, y: 14.3))
+        yValues.append(ChartDataEntry(x: 5, y: 12.1))
+        yValues.append(ChartDataEntry(x: 6, y: 11.6))
+        yValues.append(ChartDataEntry(x: 7, y: 9.3))
+        yValues.append(ChartDataEntry(x: 8, y: 7.9))
+        yValues.append(ChartDataEntry(x: 9, y: 6.8))
+        yValues.append(ChartDataEntry(x: 10, y: 6.2))
+        yValues.append(ChartDataEntry(x: 11, y: 6.1))
+        yValues.append(ChartDataEntry(x: 12, y: 6.0))
+        yValues.append(ChartDataEntry(x: 13, y: 5.8))
+        yValues.append(ChartDataEntry(x: 14, y: 5.8))
+        yValues.append(ChartDataEntry(x: 15, y: 5.9))
+        yValues.append(ChartDataEntry(x: 16, y: 7.2))
+        yValues.append(ChartDataEntry(x: 17, y: 8.3))
+        yValues.append(ChartDataEntry(x: 18, y: 9.7))
+        yValues.append(ChartDataEntry(x: 19, y: 11.2))
+        yValues.append(ChartDataEntry(x: 20, y: 14.2))
+        yValues.append(ChartDataEntry(x: 21, y: 16.7))
+        yValues.append(ChartDataEntry(x: 22, y: 17.1))
+        yValues.append(ChartDataEntry(x: 23, y: 17.2))
+        yValues.append(ChartDataEntry(x: 24, y: 17.8))
+        yValues.append(ChartDataEntry(x: 25, y: 17.9))
+        yValues.append(ChartDataEntry(x: 26, y: 17.1))
+        yValues.append(ChartDataEntry(x: 27, y: 16.5))
+        yValues.append(ChartDataEntry(x: 28, y: 16.2))
+        yValues.append(ChartDataEntry(x: 29, y: 16.1))
+        yValues.append(ChartDataEntry(x: 30, y: 15.6))
+        yValues.append(ChartDataEntry(x: 31, y: 14.3))
+        yValues.append(ChartDataEntry(x: 32, y: 14.3))
+        yValues.append(ChartDataEntry(x: 33, y: 12.1))
+        yValues.append(ChartDataEntry(x: 34, y: 11.6))
+        yValues.append(ChartDataEntry(x: 35, y: 9.3))
+        yValues.append(ChartDataEntry(x: 36, y: 7.9))
+        yValues.append(ChartDataEntry(x: 37, y: 6.8))
+        yValues.append(ChartDataEntry(x: 38, y: 6.2))
+        yValues.append(ChartDataEntry(x: 39, y: 6.1))
+        yValues.append(ChartDataEntry(x: 40, y: 6.0))
+        yValues.append(ChartDataEntry(x: 41, y: 5.8))
+        yValues.append(ChartDataEntry(x: 42, y: 5.8))
+        yValues.append(ChartDataEntry(x: 43, y: 5.9))
+        yValues.append(ChartDataEntry(x: 44, y: 7.2))
+        yValues.append(ChartDataEntry(x: 45, y: 8.3))
+        yValues.append(ChartDataEntry(x: 46, y: 9.7))
+        yValues.append(ChartDataEntry(x: 47, y: 11.2))
+        yValues.append(ChartDataEntry(x: 48, y: 14.2))
+
+        
+        
+        
+        
+        
+        
         
         print(yValues)
         
