@@ -76,9 +76,9 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     
     func scheduleNotification(){
         let content = UNMutableNotificationContent()
-        content.title = "FER Watchplant"
-        content.body = "Dostupan je novi senzor u blizini"
-        let date = Date().addingTimeInterval(1)
+        content.title = "FERbarium"
+        content.body = "Dostupan je novi senzor za spajanje"
+        let date = Date().addingTimeInterval(10)
         
         let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
@@ -146,7 +146,11 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
             print(charasteristic.uuid)
             if (charasteristic.uuid) == CBUUID(string: "8DD6A1B7-BC75-4741-8A26-264AF75807DE"){
                 peripheral.setNotifyValue(true, for: charasteristic)
-                print("istina")
+                print("TRENUTNI")
+            }
+            if (charasteristic.uuid) == CBUUID(string: "0A924CA7-87CD-4699-A3BD-ABDCD9CF126A"){
+                peripheral.setNotifyValue(true, for: charasteristic)
+                print("HISTORY")
             }
             if (charasteristic.uuid) == CBUUID(string: "FA2AF5EC-E01F-11EC-9D64-0242AC120002"){
                 print("I WROTE")
@@ -162,12 +166,12 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         if (characteristic.uuid) == CBUUID(string: "8DD6A1B7-BC75-4741-8A26-264AF75807DE"){
             let currentValue=characteristic.value
             let decodedString = String(bytes: currentValue!, encoding: .utf8)
-            print(decodedString)
+            //print(decodedString)
             var index=0
             for element in decodedString!.unicodeScalars{
                 let myInt = Double(element.value)
-                print("Mjerneje:"  + String(myInt))
-                print("Index" + String(index))
+                //print("Mjerneje:"  + String(myInt))
+                //print("Index" + String(index))
                 index=index+1
                 switch index{
                 case 0:
@@ -210,7 +214,8 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         }
         
         //        stream povijesnih podataka
-        if (characteristic.uuid) == CBUUID(string: "8DD6A1B7-BC75-4741-8A26-264AF75807DE"){
+        if (characteristic.uuid) == CBUUID(string: "0A924CA7-87CD-4699-A3BD-ABDCD9CF126A"){
+            print("HISTORY")
             let currentValue=characteristic.value
             let decodedString = String(bytes: currentValue!, encoding: .utf8)
             print(decodedString)
@@ -258,6 +263,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
                     Shared.instance.AllData[internIndex].ozone = myInt
                 default:
                     print("error", String(index))
+                    print("HISTORY")
                     
                 }
             }
@@ -292,7 +298,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     override func viewDidLoad() {
         super.viewDidLoad()
         createData()
-        
+        scheduleNotification()
         tableView1.delegate = self
         tableView1.dataSource = self
         //        deviceNames.append("FER BLE SENSOR 1")
@@ -300,6 +306,11 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         
         
         centralManager = CBCentralManager(delegate: self, queue: nil)
+        UNUserNotificationCenter.current().requestAuthorization(options:
+                    [[.alert, .sound, .badge]],
+                        completionHandler: { (granted, error) in
+                    // Handle Error
+                })
         
     }
     //UI:

@@ -44,26 +44,22 @@ class AllDataViewController: UIViewController, UITableViewDataSource, UITableVie
         case 4:
             segueIdentifier = "vlaznost_view"
         case 5:
-            segueIdentifier = "hoc_view"
-        case 6:
             segueIdentifier = "sumpor_view"
-        case 7:
+        case 6:
             segueIdentifier = "tlak_view"
-        case 8:
+        case 7:
             segueIdentifier = "benzen_view"
-        case 9:
-            segueIdentifier = "pm25_view"
-        case 10:
+        case 8:
             segueIdentifier = "co_view"
-        case 11:
+        case 9:
             segueIdentifier = "ch4_view"
-        case 12:
+        case 10:
             segueIdentifier = "lpg_view"
-        case 13:
+        case 11:
             segueIdentifier = "nh3_view"
-        case 14:
+        case 12:
             segueIdentifier = "co2_view"
-        case 15:
+        case 13:
             segueIdentifier = "o3_view"
         default:
             segueIdentifier = "temperatura_view"
@@ -90,11 +86,9 @@ class AllDataViewController: UIViewController, UITableViewDataSource, UITableVie
         Measurment(title: "Dim", imageName: "smoke"),
         Measurment(title: "Osvijetljenje", imageName: "svijetlo"),
         Measurment(title: "Vlažnost tla", imageName: "vlaznost_tla"),
-        Measurment(title: "Hlapljivi organski spojevi", imageName: "voc"),
         Measurment(title: "Sumpor", imageName: "sumpor"),
         Measurment(title: "Tlak zraka", imageName: "tlak"),
         Measurment(title: "Benzen", imageName: "benzen"),
-        Measurment(title: "PM2.5", imageName: "pm2.5"),
         Measurment(title: "Ugljični monoksid (CO)", imageName: "monoksid"),
         Measurment(title: "Metan (CH4)", imageName: "metan"),
         Measurment(title: "LPG", imageName: "lpg"),

@@ -1861,7 +1861,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="169" id="dqy-Ea-Mqg"/>
                                 </constraints>
-                                <string key="text">Ova aplikacija nastala je zajedničkim radom studenata Fakulteta elektrotehnike i računarastva u Zagrebu Marka Kozlika i Viktora Horvata pod mentorstvom [MENTORI] a za njen ispravan rad potrebno ju je upariti s komplementarno razvijenim BLE senzorskom mrežom. </string>
+                                <string key="text">Ova aplikacija nastala je zajedničkim radom studenata Fakulteta elektrotehnike i računarastva u Zagrebu, a za njen ispravan rad potrebno ju je upariti s komplementarno razvijenim BLE senzorskom mrežom. </string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
